@@ -131,7 +131,7 @@ function prato_scripts() {
 	wp_register_style( 'store', get_template_directory_uri(). '/css/store.css');
 	wp_register_style('404', get_template_directory_uri(). '/css/404.css');
 
-	if(is_page('index')) {
+	if(is_page('home')) {
 		wp_enqueue_style('index');
 		wp_enqueue_script( 'prato_index', get_template_directory_uri() . '/js/index.js', array(), '20151215', true );
 	}
@@ -158,7 +158,7 @@ function prato_scripts() {
 	}
 	if(is_page('payment_shipping')) {
 		wp_enqueue_style('payment_shipping');
-		wp_enqueue_script( 'prato_payment_shipping', get_template_directory_uri() . '/js/portfoliobundle.js', array(), '20151215', true);
+		wp_enqueue_script( 'prato_payment_shipping', get_template_directory_uri() . '/js/portfolio.js', array(), '20151215', true);
 	}
 	if(is_page('product')) {
 		wp_enqueue_style('product');
@@ -172,12 +172,6 @@ function prato_scripts() {
 		wp_enqueue_style('404');
 		wp_enqueue_script( 'prato_404', get_template_directory_uri() . '/js/404.js', array(), '20151215', true);
 	}
-
-
-
-	wp_enqueue_style( 'prato-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'prato-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'prato-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

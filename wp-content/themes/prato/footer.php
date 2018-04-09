@@ -11,10 +11,12 @@
 
 ?>
 
-	<footer>
-        footer
-    </footer>
+    </div> <!-- .content -->
 
+	<footer>
+        footer's here
+    </footer>
+</div> <!-- .wrapper -->
 <?php wp_footer(); ?>
 
 </body>

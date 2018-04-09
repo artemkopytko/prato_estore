@@ -21,20 +21,18 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div>
-	<a class="skip-link screen-reader-text" href="#"><?php esc_html_e( 'Skip to content', 'prato' ); ?></a>
-
-	<header>
-        <div></div>
-        <nav>
-            <ul>
-                <li><a href="/prato/">Главная</a></li>
-                <li><a href="/prato/about">О нас</a></li>
-                <li><a href="/prato/store">Каталог Товара</a></li>
-                <li><a href="/prato/info">Оплата / Доставка</a></li>
-                <li><a href="/prato/contacts">Контакты</a></li>
-            </ul>
-        </nav>
-        header
-    </header>
+<div class="wrapper">
+    <div class="content">
+        <section class="header">
+            <div></div>
+            <nav>
+                <ul>
+                    <li><a href="/prato/">Главная</a></li>
+                    <li><a href="/prato/about">О нас</a></li>
+                    <li><a href="/prato/store">Каталог Товара</a></li>
+                    <li><a href="/prato/info">Оплата / Доставка</a></li>
+                    <li><a href="/prato/contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </section>
 
