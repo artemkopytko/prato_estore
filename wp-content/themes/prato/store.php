@@ -1,7 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: artemkopytko
- * Date: 4/9/18
- * Time: 8:25 PM
- */
+<?php /* Template Name: store */ ?>
+
+<?php get_header(); ?>
+
+<main>
+	Магазин
+</main>
+
+<?php get_footer(); ?>
+
