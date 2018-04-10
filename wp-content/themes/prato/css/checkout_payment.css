@@ -301,8 +301,14 @@ template {
   color: #4cb69f !important;
   text-decoration: underline !important; }
 
+.ml-0 {
+  margin-left: 0; }
+
 .lang-active {
   text-decoration: underline !important; }
+
+.font-regular {
+  font-weight: 400; }
 
 .link-parent {
   text-transform: uppercase;
@@ -315,9 +321,9 @@ template {
   .link-parent a {
     color: #000;
     cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
     text-decoration: none; }
     .link-parent a:hover {
       text-decoration: underline; }
@@ -574,24 +580,5 @@ footer {
 
 .footer-contact-showroom {
   margin-top: 0; }
-
-.info {
-  height: 625px; }
-
-.info-content {
-  display: flex;
-  padding-top: 80px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .info-content h2 {
-    font-family: "open-sans";
-    font-weight: 300;
-    font-size: 13px;
-    margin-bottom: 40px;
-    text-transform: uppercase; }
-  .info-content h3, .info-content p {
-    font-family: "Helvetica Neue";
-    font-size: 13px; }
 
 /*# sourceMappingURL=checkout_payment.css.map */

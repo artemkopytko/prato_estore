@@ -1,1 +1,120 @@
-//@import "general";
+@import "general";
+
+.store {
+  min-height: 270px;
+}
+
+.store-content {
+  flex-direction: column;
+}
+
+.store-products-filter {
+  align-self: flex-start;
+  display: flex;
+  margin:100px 0;
+  justify-content: center;
+  align-items: center;
+  button {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family:$generalFont;
+    font-weight: 300;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    margin: 0 10px;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+    -ms-transition: 0.2s all ease;
+    -o-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+    &:hover {
+      color: $highlightColor;
+      text-decoration: underline;
+      -webkit-transition: 0.2s all ease;
+      -moz-transition: 0.2s all ease;
+      -ms-transition: 0.2s all ease;
+      -o-transition: 0.2s all ease;
+      transition: 0.2s all ease;
+    }
+  }
+}
+
+.store-products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+
+.product {
+  margin-bottom: 15px;
+  width:33.3333%;
+  height: 630px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: .4s all ease-out;
+  transition-delay: 0.2s;
+  &:hover {
+    outline: 1px solid black;
+    transition-delay: 0.2s;
+    transition: .4s all ease-out;
+  }
+  h4 {
+    margin-top: 55px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family:$generalFont;
+    font-weight: 300;
+  }
+  span {
+    display: block;
+    text-align: center;
+    font-family:$generalFont;
+    font-weight: 300;
+  }
+  p {
+    text-align: center;
+    display: block;
+    font-family:$generalFont;
+    font-weight: 300;
+  }
+  a {
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    width: 220px;
+    height: 40px;
+    align-self:center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family:$generalFont;
+    border: 1px solid #000;
+    color: #000;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s;
+    &:hover {
+      transition-delay: 0.2s;
+      color: $whiteColor;
+      background-color: $highlightColor;
+      border:1px solid $highlightColor;
+      transition: all 0.4s ease-out;
+    }
+  }
+}
+
+.product-image {
+  z-index: -1;
+  height: 410px;
+  width: 100%;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}

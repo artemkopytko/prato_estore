@@ -301,8 +301,14 @@ template {
   color: #4cb69f !important;
   text-decoration: underline !important; }
 
+.ml-0 {
+  margin-left: 0; }
+
 .lang-active {
   text-decoration: underline !important; }
+
+.font-regular {
+  font-weight: 400; }
 
 .link-parent {
   text-transform: uppercase;
@@ -315,9 +321,9 @@ template {
   .link-parent a {
     color: #000;
     cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
     text-decoration: none; }
     .link-parent a:hover {
       text-decoration: underline; }

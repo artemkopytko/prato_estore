@@ -581,108 +581,32 @@ footer {
 .footer-contact-showroom {
   margin-top: 0; }
 
-.store {
-  min-height: 270px; }
-
-.store-content {
-  flex-direction: column; }
-
-.store-products-filter {
-  align-self: flex-start;
-  display: flex;
-  margin: 100px 0;
-  justify-content: center;
-  align-items: center; }
-  .store-products-filter button {
-    text-transform: uppercase;
-    cursor: pointer;
-    font-family: "open-sans";
-    font-weight: 300;
-    font-size: 14px;
-    outline: none;
-    border: none;
-    margin: 0 10px;
-    -webkit-transition: 0.2s all ease;
-    -moz-transition: 0.2s all ease;
-    -ms-transition: 0.2s all ease;
-    -o-transition: 0.2s all ease;
-    transition: 0.2s all ease; }
-    .store-products-filter button:hover {
-      color: #4cb69f;
-      text-decoration: underline;
-      -webkit-transition: 0.2s all ease;
-      -moz-transition: 0.2s all ease;
-      -ms-transition: 0.2s all ease;
-      -o-transition: 0.2s all ease;
-      transition: 0.2s all ease; }
-
-.store-products {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
+.about {
+  height: 500px;
   position: relative; }
+  .about:before {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+    content: '';
+    background-image: url("http://localhost:8888/prato/wp-content/uploads/2018/04/Vector-Smart-Object-copy-8.png");
+    background-size: cover;
+    height: 500px;
+    width: 100%; }
 
-.product {
-  margin-bottom: 15px;
-  width: 33.3333%;
-  height: 630px;
+.about-content {
   display: flex;
   flex-direction: column;
-  position: relative;
-  transition: .4s all ease-out;
-  transition-delay: 0.2s; }
-  .product:hover {
-    outline: 1px solid black;
-    transition-delay: 0.2s;
-    transition: .4s all ease-out; }
-  .product h4 {
-    margin-top: 55px;
-    margin-bottom: 5px;
-    text-align: center;
-    font-family: "open-sans";
-    font-weight: 300; }
-  .product span {
-    display: block;
-    text-align: center;
-    font-family: "open-sans";
-    font-weight: 300; }
-  .product p {
-    text-align: center;
-    display: block;
-    font-family: "open-sans";
-    font-weight: 300; }
-  .product a {
-    margin-top: auto;
-    margin-bottom: 20px;
-    font-weight: 300;
-    font-size: 14px;
-    width: 220px;
-    height: 40px;
-    align-self: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: "open-sans";
-    border: 1px solid #000;
-    color: #000;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.4s ease-out;
-    transition-delay: 0.2s; }
-    .product a:hover {
-      transition-delay: 0.2s;
-      color: #f1f2f2;
-      background-color: #4cb69f;
-      border: 1px solid #4cb69f;
-      transition: all 0.4s ease-out; }
+  justify-content: center;
+  align-items: center; }
 
-.product-image {
-  z-index: -1;
-  height: 410px;
-  width: 100%;
-  background-position: 0 0;
-  background-size: 100% 100%; }
+.about-heading {
+  margin-top: 100px; }
 
-/*# sourceMappingURL=store.css.map */
+p {
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  line-height: 20px; }
+
+/*# sourceMappingURL=aboutUs.css.map */

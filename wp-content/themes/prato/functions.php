@@ -121,56 +121,56 @@ add_action( 'widgets_init', 'prato_widgets_init' );
  */
 function prato_scripts() {
 	wp_register_style( 'index', get_template_directory_uri() . '/css/index.css' );
-	wp_register_style( 'about', get_template_directory_uri() . '/css/about.css' );
-	wp_register_style( 'cart', get_template_directory_uri() . '/css/cart.css' );
-	wp_register_style( 'checkout', get_template_directory_uri(). '/css/checkout.css');
-	wp_register_style( 'checkout_payment', get_template_directory_uri(). '/css/checkout_payment.css');
-	wp_register_style( 'contacts', get_template_directory_uri() . '/css/contacts.css' );
+	wp_register_style( 'aboutUs', get_template_directory_uri() . '/css/aboutUs.css' );
+	wp_register_style( 'store', get_template_directory_uri(). '/css/store.css' );
 	wp_register_style( 'payment_shipping', get_template_directory_uri() . '/css/payment_shipping.css' );
+	wp_register_style( 'contacts', get_template_directory_uri() . '/css/contacts.css' );
+	wp_register_style( 'cart', get_template_directory_uri() . '/css/cart.css' );
+	wp_register_style( 'checkout', get_template_directory_uri(). '/css/checkout.css' );
+	wp_register_style( 'checkout_payment', get_template_directory_uri(). '/css/checkout_payment.css' );
 	wp_register_style( 'product', get_template_directory_uri() . '/css/product.css' );
-	wp_register_style( 'store', get_template_directory_uri(). '/css/store.css');
-	wp_register_style( '404', get_template_directory_uri(). '/css/404.css');
+	wp_register_style( '404', get_template_directory_uri(). '/css/404.css' );
 
 	if(is_page('home')) {
 		wp_enqueue_style('index');
-		wp_enqueue_script( 'prato_index', get_template_directory_uri() . '/js/index.js', array(), '20151215', true );
+//		wp_enqueue_script( 'prato_index', get_template_directory_uri() . '/js/index.js', array(), '20151215', true );
 	}
 	if(is_page('about')) {
-		wp_enqueue_style('about');
-		wp_enqueue_script( 'prato_about', get_template_directory_uri() . '/js/about.js', array(), '20151215', true);
+		wp_enqueue_style('aboutUs');
+//		wp_enqueue_script( 'prato_about', get_template_directory_uri() . '/js/about.js', array(), '20151215', true);
 	}
 	if(is_page('cart')) {
 		wp_enqueue_style('cart');
-		wp_enqueue_script( 'prato_cart', get_template_directory_uri() . '/js/cart.js', array(), '20151215', true);
+//		wp_enqueue_script( 'prato_cart', get_template_directory_uri() . '/js/cart.js', array(), '20151215', true);
 	}
 	if(is_page('checkout')) {
 		wp_enqueue_style('checkout');
-		wp_enqueue_script( 'prato_checkout', get_template_directory_uri() . '/js/checkout.js', array(), '20151215', true);
+//		wp_enqueue_script( 'prato_checkout', get_template_directory_uri() . '/js/checkout.js', array(), '20151215', true);
 	}
-	if(is_page('info') ) {
+	if(is_page('checkout_payment') ) {
 		wp_enqueue_style('checkout_payment');
-		wp_enqueue_script( 'prato_checkout_payment', get_template_directory_uri() . '/js/checkout_payment.js', array(), '20151215', true);
+//		wp_enqueue_script( 'prato_checkout_payment', get_template_directory_uri() . '/js/checkout_payment.js', array(), '20151215', true);
 	}
 
 	if(is_page('contacts')) {
 		wp_enqueue_style('contacts');
-		wp_enqueue_script( 'prato_contacts', get_template_directory_uri() . '/js/contacts.js', array(), '20151215', true );
+//		wp_enqueue_script( 'prato_contacts', get_template_directory_uri() . '/js/contacts.js', array(), '20151215', true );
 	}
-	if(is_page('payment_shipping')) {
+	if(is_page('info')) {
 		wp_enqueue_style('payment_shipping');
-		wp_enqueue_script( 'prato_payment_shipping', get_template_directory_uri() . '/js/portfolio.js', array(), '20151215', true);
+//		wp_enqueue_script( 'prato_payment_shipping', get_template_directory_uri() . '/js/portfolio.js', array(), '20151215', true);
 	}
 	if(is_page('product')) {
 		wp_enqueue_style('product');
-		wp_enqueue_script( 'prato_product', get_template_directory_uri() . '/js/product.js', array(), '20151215', true);
+//		wp_enqueue_script( 'prato_product', get_template_directory_uri() . '/js/product.js', array(), '20151215', true);
 	}
 	if(is_page('store') ) {
 		wp_enqueue_style('store');
-		wp_enqueue_script( 'prato_store', get_template_directory_uri() . '/js/store.js', array(), '20151215', true);
+//		wp_enqueue_script( 'prato_store', get_template_directory_uri() . '/js/store.js', array(), '20151215', true);
 	}
 	if(is_404() ) {
 		wp_enqueue_style('404');
-		wp_enqueue_script( 'prato_404', get_template_directory_uri() . '/js/404.js', array(), '20151215', true);
+//		wp_enqueue_script( 'prato_404', get_template_directory_uri() . '/js/404.js', array(), '20151215', true);
 	}
 
 	wp_enqueue_script( 'prato-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

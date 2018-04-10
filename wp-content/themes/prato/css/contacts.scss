@@ -1,1 +1,47 @@
-//@import "general";
+@import "general";
+
+.contacts {
+  height: 675px;
+}
+
+.contacts-content {
+  display: flex;
+  padding-top: 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  h2 {
+    align-self: center;
+    font-family:$generalFont;
+    font-weight: 300;
+    font-size: 13px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  p,a {
+    font-size: 12px;
+    line-height: 24px;
+    font-family:$highlightFont;
+    font-weight: 500;
+  }
+
+}
+
+.paragraph-heading {
+  margin-top: 40px;
+}
+
+.contacts-mail {
+  text-decoration: none;
+  color: #000;
+  font-size: 11px;
+  font-family:$generalFont !important;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}

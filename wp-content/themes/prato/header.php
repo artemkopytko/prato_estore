@@ -88,32 +88,32 @@
 
             <script>
                 var pathname = window.location.pathname;
+                var link;
                 if(pathname === '/prato/')
                 {
-                    var link = document.getElementById('link-home');
+                    link = document.getElementById('link-home');
                     link.classList.add('active');
                 }
                 else if (pathname === '/prato/about/')
                 {
-                    var link = document.getElementById('link-about');
+                    link = document.getElementById('link-about');
                     link.classList.add('active');
                 }
                 else if (pathname === '/prato/store/')
                 {
-                    var link = document.getElementById('link-store');
+                    link = document.getElementById('link-store');
                     link.classList.add('active');
                 }
                 else if (pathname === '/prato/info/')
                 {
-                    var link = document.getElementById('link-info');
+                    link = document.getElementById('link-info');
                     link.classList.add('active');
                 }
                 else if (pathname === '/prato/contacts/')
                 {
-                    var link = document.getElementById('link-contacts');
+                    link = document.getElementById('link-contacts');
                     link.classList.add('active');
                 }
-                console.log(pathname);
             </script>
 
         </section>
