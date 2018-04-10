@@ -1,2 +1,250 @@
 @import "general";
 
+.intro {
+  height: 675px;
+}
+
+.intro-content {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.intro-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width:41%;
+  h1 {
+    font-family: $highlightFont;
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 48px;
+  }
+  a {
+    width: 220px;
+    font-family:$generalFont;
+    font-weight:300;
+    border: 1px solid #000;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s;
+    &:hover {
+      transition-delay: 0.2s;
+      color: $whiteColor;
+      background-color: $highlightColor;
+      border:1px solid $highlightColor;
+      transition: all 0.4s ease-out;
+    }
+  }
+}
+
+.intro-image {
+  width: 59%;
+  height: 100%;
+  position: relative;
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+.about {
+  height: 500px;
+  position: relative;
+  &:before {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+    content: '';
+    background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/Vector-Smart-Object-copy-8.png');
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+  }
+}
+
+.about-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-weight: 300;
+    font-family:$generalFont;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  p {
+    text-align: center;
+    font-weight: 500;
+    font-family:$highlightFont;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 40px 0;
+  }
+  a {
+    font-weight: 300;
+    font-size: 14px;
+    width: 220px;
+    height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family:$generalFont;
+    border: 1px solid #000;
+    color: #000;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s;
+    &:hover {
+      transition-delay: 0.2s;
+      color: $whiteColor;
+      background-color: $highlightColor;
+      border:1px solid $highlightColor;
+      transition: all 0.4s ease-out;
+    }
+  }
+}
+
+.latest-in {
+  height: 820px;
+}
+
+.latest-in-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  h3 {
+    text-align: center;
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: $generalFont;
+  }
+  .latest-products {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 630px;
+    position: relative;
+  }
+}
+
+.product {
+  flex:1 0 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: .4s all ease-out;
+  transition-delay: 0.2s;
+  &:hover {
+    outline: 1px solid black;
+    transition-delay: 0.2s;
+    transition: .4s all ease-out;
+  }
+  h4 {
+    margin-top: 55px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family:$generalFont;
+    font-weight: 300;
+  }
+  span {
+    display: block;
+    text-align: center;
+    font-family:$generalFont;
+    font-weight: 300;
+  }
+  p {
+    text-align: center;
+    display: block;
+    font-family:$generalFont;
+    font-weight: 300;
+  }
+  a {
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    width: 220px;
+    height: 40px;
+    align-self:center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family:$generalFont;
+    border: 1px solid #000;
+    color: #000;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s;
+    &:hover {
+      transition-delay: 0.2s;
+      color: $whiteColor;
+      background-color: $highlightColor;
+      border:1px solid $highlightColor;
+      transition: all 0.4s ease-out;
+    }
+  }
+}
+
+.product-image {
+  z-index: -1;
+  height: 410px;
+  width: 100%;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
+
+.product-price-unknown {
+  font-family: $highlightFont;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.us {
+  height: 370px;
+}
+
+.us-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-family:$generalFont;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top:70px;
+    text-transform: uppercase;
+  }
+  p {
+    text-align: center;
+    font-size: 14px;
+    font-family:$highlightFont;
+    line-height: 24px;
+  }
+}
