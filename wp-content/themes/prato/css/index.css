@@ -304,6 +304,24 @@ template {
 .lang-active {
   text-decoration: underline !important; }
 
+.link-parent {
+  text-transform: uppercase;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: "open-sans";
+  font-weight: 300;
+  font-size: 12px; }
+  .link-parent a {
+    color: #000;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none; }
+    .link-parent a:hover {
+      text-decoration: underline; }
+
 html, body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -328,6 +346,7 @@ footer {
 
 .container {
   width: 940px;
+  position: relative;
   margin: 0 auto;
   display: flex;
   justify-content: center; }

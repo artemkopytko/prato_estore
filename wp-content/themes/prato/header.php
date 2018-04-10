@@ -63,19 +63,19 @@
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link active" href="/prato/">Главная</a>
+                            <a id="link-home" class="navigation-link" href="/prato/">Главная</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="/prato/about">О нас</a>
+                            <a id="link-about" class="navigation-link" href="/prato/about">О нас</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="/prato/store">Каталог Товара</a>
+                            <a id="link-store" class="navigation-link" href="/prato/store">Каталог Товара</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="/prato/info">Оплата / Доставка</a>
+                            <a id="link-info" class="navigation-link" href="/prato/info">Оплата / Доставка</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="navigation-link" href="/prato/contacts">Контакты</a>
+                            <a id="link-contacts" class="navigation-link" href="/prato/contacts">Контакты</a>
                         </li>
                     </ul>
                     <div class="navigation-search">
@@ -85,5 +85,38 @@
                     </div>
                 </div>
             </nav>
+
+            <script>
+                var pathname = window.location.pathname;
+                if(pathname === '/prato/')
+                {
+                    var link = document.getElementById('link-home');
+                    link.classList.add('active');
+                }
+                else if (pathname === '/prato/about/')
+                {
+                    var link = document.getElementById('link-about');
+                    link.classList.add('active');
+                }
+                else if (pathname === '/prato/store/')
+                {
+                    var link = document.getElementById('link-store');
+                    link.classList.add('active');
+                }
+                else if (pathname === '/prato/info/')
+                {
+                    var link = document.getElementById('link-info');
+                    link.classList.add('active');
+                }
+                else if (pathname === '/prato/contacts/')
+                {
+                    var link = document.getElementById('link-contacts');
+                    link.classList.add('active');
+                }
+                console.log(pathname);
+            </script>
+
         </section>
+
+
 

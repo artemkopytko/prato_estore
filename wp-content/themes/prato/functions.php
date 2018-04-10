@@ -124,12 +124,12 @@ function prato_scripts() {
 	wp_register_style( 'about', get_template_directory_uri() . '/css/about.css' );
 	wp_register_style( 'cart', get_template_directory_uri() . '/css/cart.css' );
 	wp_register_style( 'checkout', get_template_directory_uri(). '/css/checkout.css');
-	wp_register_style('checkout_payment', get_template_directory_uri(). '/css/checkout_payment.css');
+	wp_register_style( 'checkout_payment', get_template_directory_uri(). '/css/checkout_payment.css');
 	wp_register_style( 'contacts', get_template_directory_uri() . '/css/contacts.css' );
 	wp_register_style( 'payment_shipping', get_template_directory_uri() . '/css/payment_shipping.css' );
 	wp_register_style( 'product', get_template_directory_uri() . '/css/product.css' );
 	wp_register_style( 'store', get_template_directory_uri(). '/css/store.css');
-	wp_register_style('404', get_template_directory_uri(). '/css/404.css');
+	wp_register_style( '404', get_template_directory_uri(). '/css/404.css');
 
 	if(is_page('home')) {
 		wp_enqueue_style('index');
@@ -147,7 +147,7 @@ function prato_scripts() {
 		wp_enqueue_style('checkout');
 		wp_enqueue_script( 'prato_checkout', get_template_directory_uri() . '/js/checkout.js', array(), '20151215', true);
 	}
-	if(is_page('checkout_payment') ) {
+	if(is_page('info') ) {
 		wp_enqueue_style('checkout_payment');
 		wp_enqueue_script( 'prato_checkout_payment', get_template_directory_uri() . '/js/checkout_payment.js', array(), '20151215', true);
 	}

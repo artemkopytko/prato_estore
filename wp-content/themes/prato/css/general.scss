@@ -361,6 +361,27 @@ $whiteColor: #f1f2f2;
   text-decoration: underline !important;
 }
 
+.link-parent {
+  text-transform: uppercase;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family:$generalFont;
+  font-weight: 300;
+  font-size: 12px;
+  a {
+    color: #000;
+    cursor: pointer;
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 html,body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -390,6 +411,7 @@ footer {
 
 .container {
   width: 940px;
+  position: relative;
   //max-width: 90%;
   margin: 0 auto;
   display: flex;

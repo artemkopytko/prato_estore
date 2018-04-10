@@ -3,7 +3,11 @@
 <?php get_header(); ?>
 
 <main>
-	О нас
+	<section class="about">
+        <div class="container about-content">
+
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
