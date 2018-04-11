@@ -188,6 +188,16 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+add_filter('upload_mimes', 'add_custom_upload_mimes');
+function add_custom_upload_mimes($existing_mimes) {
+	$existing_mimes['otf'] = 'application/x-font-otf';
+	$existing_mimes['woff'] = 'application/x-font-woff';
+	$existing_mimes['ttf'] = 'application/x-font-ttf';
+	$existing_mimes['svg'] = 'image/svg+xml';
+	$existing_mimes['eot'] = 'application/vnd.ms-fontobject';
+	return $existing_mimes;
+}
+
 // Remove WP Version From Styles
 add_filter( 'style_loader_src', 'sdt_remove_ver_css_js', 9999 );
 // Remove WP Version From Scripts

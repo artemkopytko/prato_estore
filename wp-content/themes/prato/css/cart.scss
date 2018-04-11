@@ -1,1 +1,124 @@
-//@import "general";
+@import "general";
+
+.cart {
+  min-height: 675px;
+}
+
+.cart-wrapper {
+  width: 100%;
+  margin:115px auto;
+  border: 1px solid #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 40px 50px  60px;
+  h2 {
+    font-family:$generalFont;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+}
+
+.cart-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.cart-cell,.cart-cell-big {
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.cart-cell {
+  flex:1 0 0;
+  position: relative;
+  text-align: center;
+  p,span {
+    font-family:$generalFont;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  input {
+    font-family:$generalFont;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.cart-item-title {
+  font-family:$highlightFont;
+  font-size: 14px;
+}
+
+.cart-item-desc {
+  p,span {
+    font-family:$highlightFont;
+    font-size: 14px;
+  }
+}
+
+.cart-item-desc-heading {
+  margin-bottom: 0;
+}
+
+.cart-cell-big {
+  position: relative;
+  flex:1.5 0 0;
+}
+
+.cart-cell-bottom {
+  text-align: left;
+  align-self: flex-end;
+  padding-left: 10px;
+}
+
+.cart-item-image {
+  margin-top: 25px;
+  min-height: 265px;
+  min-width: 210px;
+  max-width: 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100%;
+  background-position: 0 0;
+}
+
+
+
+
+
+.cart-order {
+  position: absolute;
+  bottom: 45px;
+  right:45px;
+  font-weight: 300;
+  font-size: 14px;
+  width: 220px;
+  height: 40px;
+  align-self:center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family:$generalFont;
+  border: 1px solid #000;
+  color: #000;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  transition-delay: 0.2s;
+  &:hover {
+    transition-delay: 0.2s;
+    color: $whiteColor;
+    background-color: $highlightColor;
+    border:1px solid $highlightColor;
+    transition: all 0.4s ease-out;
+  }
+}

@@ -347,8 +347,13 @@ template {
 //  src: url('AG_Helvetica Regular.ttf') format('truetype'); /* IE9 Compat Modes */
 //}
 
-$generalFont: 'open-sans';
-$highlightFont: 'Helvetica Neue';
+@font-face {
+  font-family: AGHelvetica;
+  src: url(http://localhost:8888/prato/wp-content/uploads/2018/04/AG_Helvetica-Regular.ttf);
+}
+
+$generalFont: 'Open Sans', sans-serif;
+$highlightFont: AGHelvetica, sans-serif;
 $highlightColor: #4cb69f;
 $whiteColor: #f1f2f2;
 
