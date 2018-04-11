@@ -304,6 +304,9 @@ template {
   color: #4cb69f !important;
   text-decoration: underline !important; }
 
+.highlighted {
+  color: #4cb69f; }
+
 .ml-0 {
   margin-left: 0; }
 
@@ -334,8 +337,7 @@ template {
 html, body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: AGHelvetica, sans-serif, "Open Sans"; }
+  -moz-osx-font-smoothing: grayscale; }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;

@@ -33,7 +33,7 @@
                     <p>20 000грн</p>
                     <a href="">Подробнее</a>
                 </div>
-                <div class="product" >
+                <div class="product">
                     <!--                    IMAGE-->
                     <div class="product-image"
                          style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/image-15-08-16-06-54-18.png');"></div>
@@ -60,7 +60,7 @@
                     <p>20 000грн</p>
                     <a href="">Подробнее</a>
                 </div>
-                <div class="product" >
+                <div class="product">
                     <!--                    IMAGE-->
                     <div class="product-image"
                          style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/image-15-08-16-06-54-18.png');"></div>
@@ -87,7 +87,7 @@
                     <p>20 000грн</p>
                     <a href="">Подробнее</a>
                 </div>
-                <div class="product" >
+                <div class="product">
                     <!--                    IMAGE-->
                     <div class="product-image"
                          style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/image-15-08-16-06-54-18.png');"></div>

@@ -362,6 +362,10 @@ $whiteColor: #f1f2f2;
   text-decoration: underline !important;
 }
 
+.highlighted {
+  color: $highlightColor;
+}
+
 .ml-0 {
   margin-left: 0;
 }
@@ -399,7 +403,6 @@ html,body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: $highlightFont, "Open Sans";
 }
 
 *,*:after,*:before {
