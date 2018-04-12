@@ -32,10 +32,18 @@
                     <li class="navigation-item-footer">
                         <a class="navigation-link-footer" href="/prato/store">Каталог Товара</a>
                         <ul class="footer-products-categories">
-                            <li class="footer-product-category">Кресла</li>
-                            <li class="footer-product-category">Кровати</li>
-                            <li class="footer-product-category">Стенки</li>
-                            <li class="footer-product-category">Тумбы</li>
+                            <li class="footer-product-category">
+                                <a href="prato/store?category=chairs">Кресла</a>
+                            </li>
+                            <li class="footer-product-category">
+                                <a href="/prato/store?category=beds">Кровати</a>
+                            </li>
+                            <li class="footer-product-category">
+                                <a href="/prato/store?category=walls">Стенки</a>
+                            </li>
+                            <li class="footer-product-category">
+                                <a href="/prato/store?category=crubstones">Тумбы</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="navigation-item-footer">

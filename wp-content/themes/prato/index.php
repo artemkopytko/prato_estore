@@ -23,7 +23,7 @@ get_header();
                 <h1>ПРОФЕССИОНАЛИЗМ – КЛЮЧЕВОЕ СЛОВО,
                     КОГДА РЕЧЬ ИДЕТ О МЕБЕЛИ “PRATO”,
                     ПРИ СОЗДАНИИ КОТОРОЙ ИСПОЛЬЗУЮТСЯ ЛУЧШИЕ МЕТОДЫ СТОЛЯРНОГО МАСТЕРСТВА.</h1>
-                <a>Посмотреть</a>
+                <a href="/prato/store">Посмотреть</a>
             </div>
             <div class="intro-image">
 <!--                IMAGE BANNER-->
@@ -39,7 +39,7 @@ get_header();
                 для Вашего дома. <br>
                 Каждая вещ производится только в единичном экземпляре. <br>
                 Вы можете сами выбрать цвет и дизайн, либо приобрести готовое изделие. </p>
-            <a href="/about">Читать Дальше</a>
+            <a href="/prato/about">Читать Дальше</a>
         </div>
     </section>
     <section class="latest-in">
@@ -52,8 +52,8 @@ get_header();
                          style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/banner_photo-1.png')"></div>
                     <h4>Кресло</h4>
                     <span>Стиль модерн</span>
-                    <p>20 000грн</p>
-                    <a href="">Подробнее</a>
+                    <p>20 000 грн</p>
+                    <a href="/prato/product">Подробнее</a>
                 </div>
                 <div class="product">
 <!--                    IMAGE-->
@@ -62,16 +62,16 @@ get_header();
                     <h4>Стол</h4>
                     <span>Стиль модерн</span>
                     <p class="product-price-unknown">узнать цену</p>
-                    <a href="">Подробнее</a>
+                    <a href="/prato/product">Подробнее</a>
                 </div>
                 <div class="product" >
 <!--                    IMAGE-->
                     <div class="product-image"
                          style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/image-15-08-16-06-54-18.png');"></div>
                     <h4>Тумба</h4>
-                    <span>Стиль модерно</span>
-                    <p></p>
-                    <a href="">Подробнее</a>
+                    <span>Стиль модерн</span>
+                    <p>20 000 грн</p>
+                    <a href="/prato/product">Подробнее</a>
                 </div>
             </div>
         </div>

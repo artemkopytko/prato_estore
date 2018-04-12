@@ -1,7 +1,7 @@
 @import "general";
 
 .intro {
-  height: 675px;
+  min-height: 675px;
 }
 
 .intro-content {
@@ -61,7 +61,7 @@
 }
 
 .about {
-  height: 500px;
+  min-height: 500px;
   position: relative;
   &:before {
     position: absolute;
@@ -122,7 +122,7 @@
 }
 
 .latest-in {
-  height: 820px;
+  min-height: 820px;
 }
 
 .latest-in-content {
@@ -142,7 +142,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 630px;
+    min-height: 630px;
     position: relative;
   }
 }
@@ -226,7 +226,7 @@
 }
 
 .us {
-  height: 370px;
+  min-height: 370px;
 }
 
 .us-content {
@@ -246,5 +246,29 @@
     font-size: 14px;
     font-family:$highlightFont;
     line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 450px)
+{
+  .intro-content {
+    height: auto;
+    flex-direction: column;
+  }
+  .intro-info {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+    a {
+      align-self: center;
+    }
+  }
+  .intro-image {
+    width: 75%;
+    margin-bottom: 25px;
+  }
+  .latest-products {
+    flex-wrap: wrap;
+    min-height: 630px;
   }
 }

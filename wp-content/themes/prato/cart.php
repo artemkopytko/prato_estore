@@ -74,7 +74,7 @@
 						</div>
 					</div>
 <!--					IF CART IS NOT EMPTY-->
-					<a class="cart-order" href="#">Заказать</a>
+					<a class="cart-order" href="/prato/checkout">Заказать</a>
 				</div>
 			</div>
 	</section>

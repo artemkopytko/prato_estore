@@ -22,7 +22,7 @@
                     <h4>Кресло</h4>
                     <span>Стиль модерн</span>
                     <p>20 000грн</p>
-                    <a href="">Подробнее</a>
+                    <a href="/prato/product">Подробнее</a>
                 </div>
                 <div class="product">
                     <!--                    IMAGE-->

@@ -17,6 +17,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+            crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=cyrillic-ext" rel="stylesheet">
 	<?php wp_head(); ?>
@@ -55,6 +59,37 @@
                 </div>
             </div>
             <nav class="navigation">
+                <div class="navbar-toggler" id="menu-toggle">
+                    <div class="hamburger-inner"></div>
+                </div>
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li id="menu-close" class="toggle clearfix">
+                            <i class="fas fa-times"></i>
+                        </li>
+                        <li class="navigation-item nav-item-img">
+                            <a class="navigation-link" href="/prato/">
+                                <!--                                IMAGE LOGO-->
+                                <img src="http://localhost:8888/prato/wp-content/uploads/2018/04/logo.svg" alt="#">
+                            </a>
+                        </li>
+                        <li class="navigation-item">
+                            <a id="link-home" class="navigation-link" href="/prato/">Главная</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a id="link-about" class="navigation-link" href="/prato/about">О нас</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a id="link-store" class="navigation-link" href="/prato/store">Каталог Товара</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a id="link-info" class="navigation-link" href="/prato/info">Оплата / Доставка</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a id="link-contacts" class="navigation-link" href="/prato/contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="container">
                     <ul class="navigation-list">
                         <li class="navigation-item">
@@ -88,6 +123,18 @@
             </nav>
 
             <script>
+                $("#menu-close").click(function(e) {
+                    e.preventDefault();
+                    $("#sidebar-wrapper").css("left", "-500px");
+                });
+                $("#menu-toggle").click(function(e) {
+                    e.preventDefault();
+                    $("#sidebar-wrapper").css("left", "0");
+                });
+
+
+
+
                 var pathname = window.location.pathname;
                 var link;
                 if(pathname === '/prato/')
