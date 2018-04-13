@@ -259,6 +259,7 @@
     width: 100%;
     text-align: center;
     margin-bottom: 25px;
+    margin-top: 70px;
     a {
       align-self: center;
     }
@@ -270,5 +271,8 @@
   .latest-products {
     flex-wrap: wrap;
     min-height: 630px;
+  }
+  .us-content h2 {
+    font-size: 22px;
   }
 }

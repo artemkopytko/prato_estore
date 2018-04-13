@@ -67,14 +67,36 @@
                                 Г. Мариуполь ул. Итальянская, 87 <br>
                                 «Галерея Табурет»</li>
                         </ul>
-                    </li>
-                    <li class="navigation-item-footer">
-                        <a class="navigation-link-footer social-footer" href="/prato/contacts">
+
+                        <a class="social-footer" href="/prato/contacts">
                             <i class="fab fa-facebook-f" style="color: white;"></i>
                         </a>
                     </li>
                 </ul>
             </nav>
+
+            <div class="footer-mobile-social">
+                <a class="navigation-link-footer social-footer" href="/prato/contacts">
+                    <i class="fab fa-facebook-f" style="color: white;"></i>
+                </a>
+            </div>
+            <div class="footer-mobile-contacts">
+                <ul class="footer-contacts-extended">
+                    <li class="footer-contact-phones">
+                        <a href="tel:+380504710221">050 471 02 21</a><br>
+                        <a href="tel:+380675445421">067 544 54 21</a>
+                    </li>
+                    <li class="footer-contact-email">
+                        <a href="mailto:pratoaleks@gmail.com">
+                            pratoaleks@gmail.com
+                        </a>
+                    </li>
+                    <li class="footer-contact-address">Address 4240 Lancovo 6D Radovlica Slovenia.</li>
+                    <li class="footer-contact-showroom">Товар можно посмотреть и приобрести по адресу: <br>
+                        Г. Мариуполь ул. Итальянская, 87 <br>
+                        «Галерея Табурет»</li>
+                </ul>
+            </div>
 
         </div>
     </section>
