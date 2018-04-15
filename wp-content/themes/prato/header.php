@@ -133,7 +133,7 @@
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-home" class="navigation-link" href="/">Главная</a>
+                            <a id="" class="navigation-link link-home" href="/">Главная</a>
                         </li>
                         <li class="navigation-item">
                             <a id="link-about" class="navigation-link" href="/about">О нас</a>
@@ -158,7 +158,7 @@
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-home" class="navigation-link" href="/">Главная</a>
+                            <a id="" class="navigation-link link-home" href="/">Главная</a>
                         </li>
                         <li class="navigation-item">
                             <a id="link-about" class="navigation-link" href="/about">О нас</a>
@@ -195,32 +195,35 @@
 
 
                 var pathname = window.location.pathname;
-                var link;
+                var links;
                 if(pathname === '/prato/')
                 {
-                    link = document.getElementById('link-home');
-                    link.classList.add('active');
+                    links = document.getElementsByClassName('link-home');
                 }
                 else if (pathname === '/prato/about/')
                 {
-                    link = document.getElementById('link-about');
+                    link = document.getElementsByClassName('link-about');
                     link.classList.add('active');
                 }
                 else if (pathname === '/prato/store/')
                 {
-                    link = document.getElementById('link-store');
+                    link = document.getElementsByClassName('link-store');
                     link.classList.add('active');
                 }
                 else if (pathname === '/prato/info/')
                 {
-                    link = document.getElementById('link-info');
+                    link = document.getElementsByClassName('link-info');
                     link.classList.add('active');
                 }
                 else if (pathname === '/prato/contacts/')
                 {
-                    link = document.getElementById('link-contacts');
+                    link = document.getElementsByClassName('link-contacts');
                     link.classList.add('active');
                 }
+
+                links[0].classList.add('active');
+                links[1].classList.add('active');
+
             </script>
 
         </section>
