@@ -104,8 +104,13 @@
                         </li>
                         <li class="footer-contact-address">Address 4240 Lancovo 6D Radovlica Slovenia.</li>
                         <li class="footer-contact-showroom">Товар можно посмотреть и приобрести по адресу: <br>
-                            Г. Мариуполь ул. Итальянская, 87 <br>
-                            «Галерея Табурет»</li>
+							<?php if( get_field('address') ): ?>
+								<?php the_field('address'); ?>
+							<?php else :?>
+                                Г. Мариуполь ул. Итальянская, 87 <br>
+                                «Галерея Табурет»
+							<?php endif; ?>
+                        </li>
                     </ul>
 
                     <a class="social-footer" href="/contacts">
