@@ -347,13 +347,13 @@ template {
 //  src: url('AG_Helvetica Regular.ttf') format('truetype'); /* IE9 Compat Modes */
 //}
 
-@font-face {
-  font-family: AGHelvetica;
-  src: url(http://localhost:8888/prato/wp-content/uploads/2018/04/AG_Helvetica-Regular.ttf);
-}
+//@font-face {
+//  font-family: AGHelvetica;
+//  src: url(http://localhost:8888/prato/wp-content/uploads/2018/04/AG_Helvetica-Regular.ttf);
+//}
 
 $generalFont: 'Open Sans', sans-serif;
-$highlightFont: AGHelvetica, sans-serif;
+$highlightFont: Helvetica, Arial, sans-serif;
 $highlightColor: #4cb69f;
 $whiteColor: #f1f2f2;
 
@@ -501,6 +501,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#social-fb {
+  display: flex;
 }
 
 .header-top-langs {
@@ -918,5 +922,12 @@ footer {
     left: 0;
     right: 0;
     margin: 10px auto;
+  }
+  .link-parent {
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 25px;
+    top: 0;
+    left: 0;
   }
 }

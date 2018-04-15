@@ -33,22 +33,37 @@
             <div class="header-top">
                 <div class="container header-top-content">
                     <div class="header-top-contacts">
-                        <a href="tel:+380504710221">050 471 02 21</a>
-                        <a href="tel:+380675445421">067 544 54 21</a>
+                        <a class="notranslate" href="tel:+380504710221">050 471 02 21</a>
+                        <a class="notranslate" href="tel:+380675445421">067 544 54 21</a>
                     </div>
                     <div class="header-top-right">
                         <div class="header-top-mail">
                             <a href="mailto:pratoaleks@gmail.com">pratoaleks@gmail.com</a>
                         </div>
                         <div class="header-top-social">
-                            <a href="#">
+                            <a id="social-fb" href="#">
                                 <i class="fab fa-facebook-f" style="color: black;"></i>
                             </a>
                         </div>
                         <div class="header-top-langs">
-                            <a href="#" class="lang-en">EN</a>
-                            <a href="#" class="lang-ua">UA</a>
-                            <a href="#" class="lang-ru lang-active">RU</a>
+
+                            <div id="flags" class="size18">
+                                <ul id="sortable" class="ui-sortable" style="float:left">
+                                    <li id="English">
+                                        <a title="English" class="notranslate flag en united-states" data-lang="English">EN</a>
+                                    </li>
+                                    <li id="Russian">
+                                        <a title="Russian" class="notranslate flag ru Russian" data-lang="Russian">RU</a>
+                                    </li>
+                                    <li id="Ukrainian">
+                                        <a title="Ukrainian" class="notranslate flag uk Ukrainian" data-lang="Ukrainian">UA</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+<!--                            <a href="#" class="lang-en">EN</a>-->
+<!--                            <a href="#" class="lang-ua">UA</a>-->
+<!--                            <a href="#" class="lang-ru lang-active">RU</a>-->
 <!--                            LANGUAGES SUPPORT-->
                         </div>
                         <div class="header-top-cart">

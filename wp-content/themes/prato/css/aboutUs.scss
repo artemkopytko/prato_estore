@@ -1,7 +1,7 @@
 @import "general";
 
 .about {
-  height: 500px;
+  min-height: 500px;
   position: relative;
   &:before {
     position: absolute;
@@ -10,7 +10,7 @@
     content: '';
     background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/Vector-Smart-Object-copy-8.png');
     background-size: cover;
-    height: 500px;
+    height: 100%;
     width: 100%;
   }
 }
@@ -30,4 +30,13 @@ p {
   font-family:$highlightFont;
   font-size: 14px;
   line-height: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .about {
+    padding-top: 85px;
+  }
+  .about-heading {
+    margin-top: 10px;
+  }
 }

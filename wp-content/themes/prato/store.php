@@ -8,7 +8,7 @@
         <div class="container store-content">
             <div class="link-parent"><a href="/prato/">Главная</a> / Каталог Товара</div>
             <div class="store-products-filter">
-                <button class="ml-0">Каталог Товара</button>
+                <h2 class="ml-0">Каталог Товара</h2>
                 <button>Кресла</button>
                 <button>Кровати</button>
                 <button>Стенки</button>

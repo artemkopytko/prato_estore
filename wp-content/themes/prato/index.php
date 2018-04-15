@@ -16,6 +16,11 @@
 get_header();
 ?>
 
+    <style>
+        .about:before {
+            background-image: url("http://localhost:8888/prato/wp-content/uploads/2018/04/Vector-Smart-Object-copy-8.png");
+        }
+    </style>
 <main>
 	<section class="intro">
         <div class="container intro-content">
@@ -37,7 +42,7 @@ get_header();
             <p>Молодая и креативная студия дизайна “Prato” <br>
                 Предлагает Вам удобную стильную и уникальную мебель из массива дерева <br>
                 для Вашего дома. <br>
-                Каждая вещ производится только в единичном экземпляре. <br>
+                Каждая вещь производится только в единичном экземпляре. <br>
                 Вы можете сами выбрать цвет и дизайн, либо приобрести готовое изделие. </p>
             <a href="/prato/about">Читать Дальше</a>
         </div>

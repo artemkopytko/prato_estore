@@ -297,9 +297,6 @@ template {
 [hidden] {
   display: none; }
 
-@font-face {
-  font-family: AGHelvetica;
-  src: url(http://localhost:8888/prato/wp-content/uploads/2018/04/AG_Helvetica-Regular.ttf); }
 .active {
   color: #4cb69f !important;
   text-decoration: underline !important; }
@@ -416,6 +413,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+#social-fb {
+  display: flex; }
 
 .header-top-langs a {
   font-family: "Open Sans", sans-serif;
@@ -619,7 +619,7 @@ footer {
   .footer-contact-email a {
     font-size: 11px;
     font-weight: 300;
-    font-family: AGHelvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: #000;
     margin-top: 25px; }
     .footer-contact-email a:hover {
@@ -773,9 +773,16 @@ footer {
     width: 30px;
     left: 0;
     right: 0;
-    margin: 10px auto; } }
+    margin: 10px auto; }
+
+  .link-parent {
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 25px;
+    top: 0;
+    left: 0; } }
 .about {
-  height: 500px;
+  min-height: 500px;
   position: relative; }
   .about:before {
     position: absolute;
@@ -784,7 +791,7 @@ footer {
     content: '';
     background-image: url("http://localhost:8888/prato/wp-content/uploads/2018/04/Vector-Smart-Object-copy-8.png");
     background-size: cover;
-    height: 500px;
+    height: 100%;
     width: 100%; }
 
 .about-content {
@@ -798,8 +805,15 @@ footer {
 
 p {
   text-align: center;
-  font-family: AGHelvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px; }
+
+@media screen and (max-width: 450px) {
+  .about {
+    padding-top: 85px; }
+
+  .about-heading {
+    margin-top: 10px; } }
 
 /*# sourceMappingURL=aboutUs.css.map */

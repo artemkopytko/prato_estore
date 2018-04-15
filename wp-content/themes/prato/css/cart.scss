@@ -122,3 +122,11 @@
     transition: all 0.4s ease-out;
   }
 }
+
+.container {
+  max-width: 940px !important;
+}
+
+.footer {
+  min-width: 940px;
+}

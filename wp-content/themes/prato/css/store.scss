@@ -14,12 +14,20 @@
   margin:100px 0;
   justify-content: center;
   align-items: center;
+  h2 {
+    font-family:$generalFont;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    margin-right: 30px;
+  }
   button {
     text-transform: uppercase;
     cursor: pointer;
     font-family:$generalFont;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
     outline: none;
     border: none;
     margin: 0 10px;
@@ -117,4 +125,30 @@
   width: 100%;
   background-position: 0 0;
   background-size: 100% 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .store-content {
+    padding-top: 85px;
+  }
+  .store-products-filter {
+    display: flex;
+    align-self: auto;
+    margin: 0 0 30px 0;
+    flex-direction: column;
+  }
+  .store-products {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .product {
+    width: 100%;
+  }
+  .store-products-filter h2 {
+    margin-right: 0;
+  }
+  .store-products-filter button {
+    margin: 8px 10px;
+    background: none;
+  }
 }
