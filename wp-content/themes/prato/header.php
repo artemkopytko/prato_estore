@@ -133,19 +133,19 @@
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a id="" class="navigation-link link-home" href="/">Главная</a>
+                            <a class="link-home navigation-link" href="/">Главная</a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-about" class="navigation-link" href="/about">О нас</a>
+                            <a class="link-about navigation-link" href="/about">О нас</a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-store" class="navigation-link" href="/store">Каталог Товара</a>
+                            <a class="link-store navigation-link" href="/store">Каталог Товара</a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-info" class="navigation-link" href="/info">Оплата / Доставка</a>
+                            <a class="link-info navigation-link" href="/info">Оплата / Доставка</a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-contacts" class="navigation-link" href="/contacts">Контакты</a>
+                            <a class="link-contacts navigation-link" href="/contacts">Контакты</a>
                         </li>
                     </ul>
                 </div>
@@ -154,23 +154,27 @@
                         <li class="navigation-item">
                             <a class="navigation-link" href="/">
                                 <!--                                IMAGE LOGO-->
-                                <img src="https://pratostore.com/wp-content/uploads/2018/04/logo-1.svg" alt="#">
+								<?php if( get_field('prato_logo') ): ?>
+                                    <img src="<?php the_field('prato_logo'); ?>">
+								<?php else :?>
+                                    <img src="https://pratostore.com/wp-content/uploads/2018/04/logo-1.svg" alt="">
+								<?php endif; ?>
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a id="" class="navigation-link link-home" href="/">Главная</a>
+                            <a class="link-home navigation-link" href="/">Главная</a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-about" class="navigation-link" href="/about">О нас</a>
+                            <a class="link-about navigation-link" href="/about">О нас</a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-store" class="navigation-link" href="/store">Каталог Товара</a>
+                            <a class="link-store navigation-link" href="/store">Каталог Товара</a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-info" class="navigation-link" href="/info">Оплата / Доставка</a>
+                            <a class="link-info navigation-link" href="/info">Оплата / Доставка</a>
                         </li>
                         <li class="navigation-item">
-                            <a id="link-contacts" class="navigation-link" href="/contacts">Контакты</a>
+                            <a class="link-contacts navigation-link" href="/contacts">Контакты</a>
                         </li>
                     </ul>
                     <div class="navigation-search">
@@ -196,29 +200,25 @@
 
                 var pathname = window.location.pathname;
                 var links;
-                if(pathname === '/prato/')
+                if(pathname === '/')
                 {
                     links = document.getElementsByClassName('link-home');
                 }
-                else if (pathname === '/prato/about/')
+                else if (pathname === '/about/')
                 {
-                    link = document.getElementsByClassName('link-about');
-                    link.classList.add('active');
+                    links = document.getElementsByClassName('link-about');
                 }
-                else if (pathname === '/prato/store/')
+                else if (pathname === '/store/')
                 {
-                    link = document.getElementsByClassName('link-store');
-                    link.classList.add('active');
+                    links = document.getElementsByClassName('link-store');
                 }
-                else if (pathname === '/prato/info/')
+                else if (pathname === '/info/')
                 {
-                    link = document.getElementsByClassName('link-info');
-                    link.classList.add('active');
+                    links = document.getElementsByClassName('link-info');
                 }
-                else if (pathname === '/prato/contacts/')
+                else if (pathname === '/contacts/')
                 {
-                    link = document.getElementsByClassName('link-contacts');
-                    link.classList.add('active');
+                    links = document.getElementsByClassName('link-contacts');
                 }
 
                 links[0].classList.add('active');
