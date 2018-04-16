@@ -480,8 +480,7 @@ footer {
     transition: 0.2s color ease; }
 
 .navigation-search {
-  width: 200px;
-  height: 25px;
+  min-width: 200px;
   border: 1px solid #000;
   align-self: center;
   outline: none;
@@ -491,6 +490,32 @@ footer {
     top: 4px;
     right: 5px;
     color: rgba(0, 0, 0, 0.5); }
+
+.woocommerce-product-search {
+  position: relative;
+  height: 25px; }
+  .woocommerce-product-search label {
+    display: none; }
+  .woocommerce-product-search input[type="search"] {
+    padding-left: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    width: 85%;
+    line-height: 23px; }
+  .woocommerce-product-search input[type="submit"] {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 25px;
+    cursor: pointer;
+    width: 15%;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 100; }
 
 .footer {
   min-height: 475px;

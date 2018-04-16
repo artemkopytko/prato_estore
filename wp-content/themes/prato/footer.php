@@ -40,6 +40,11 @@
                     <ul class="footer-products-categories">
 	                    <?php
 
+	                    $number = null;
+	                    $orderby = '';
+	                    $hide_empty = 0;
+	                    $ids = array();
+
 	                    $args = array(
 		                    'taxonomy'   => "product_cat",
 		                    'number'     => $number,
