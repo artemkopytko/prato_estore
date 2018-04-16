@@ -133,19 +133,19 @@
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-home navigation-link" href="/">Главная</a>
+                            <a class="link-home navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Домашняя страница' )->ID ); ?>">Главная</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-about navigation-link" href="/about">О нас</a>
+                            <a class="link-about navigation-link" href="<?php echo get_page_link( get_page_by_title( 'О Нас' )->ID ); ?>">О нас</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-store navigation-link" href="/store">Каталог Товара</a>
+                            <a class="link-store navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Каталог Товаров' )->ID ); ?>">Каталог Товара</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-info navigation-link" href="/info">Оплата / Доставка</a>
+                            <a class="link-info navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Оплата и Доставка' )->ID ); ?>">Оплата / Доставка</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-contacts navigation-link" href="/contacts">Контакты</a>
+                            <a class="link-contacts navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Контакты' )->ID ); ?>">Контакты</a>
                         </li>
                     </ul>
                 </div>
@@ -162,19 +162,19 @@
                             </a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-home navigation-link" href="/">Главная</a>
+                            <a class="link-home navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Домашняя страница' )->ID ); ?>">Главная</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-about navigation-link" href="/about">О нас</a>
+                            <a class="link-about navigation-link" href="<?php echo get_page_link( get_page_by_title( 'О Нас' )->ID ); ?>">О нас</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-store navigation-link" href="/store">Каталог Товара</a>
+                            <a class="link-store navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Каталог Товаров' )->ID ); ?>">Каталог Товара</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-info navigation-link" href="/info">Оплата / Доставка</a>
+                            <a class="link-info navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Оплата и Доставка' )->ID ); ?>">Оплата / Доставка</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-contacts navigation-link" href="/contacts">Контакты</a>
+                            <a class="link-contacts navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Контакты' )->ID ); ?>">Контакты</a>
                         </li>
                     </ul>
                     <div class="navigation-search">

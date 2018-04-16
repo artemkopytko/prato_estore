@@ -27,34 +27,47 @@
 						<?php endif; ?>
                     </a>
                 </li>
+
                 <li class="navigation-item-footer">
-                    <a class="navigation-link-footer" href="/">Главная</a>
+                    <a class="navigation-link-footer" href="<?php echo get_page_link( get_page_by_title( 'Домашняя страница' )->ID ); ?>">Главная</a>
                 </li>
                 <li class="navigation-item-footer">
-                    <a class="navigation-link-footer" href="/about">О нас</a>
+                    <a class="navigation-link-footer" href="<?php echo get_page_link( get_page_by_title( 'О Нас' )->ID ); ?>">О нас</a>
                 </li>
                 <li class="navigation-item-footer">
-                    <a class="navigation-link-footer" href="/store">Каталог Товара</a>
+                    <a class="navigation-link-footer" href="<?php echo get_page_link( get_page_by_title( 'Каталог Товаров' )->ID ); ?>">Каталог Товара</a>
+
                     <ul class="footer-products-categories">
-                        <li class="footer-product-category">
-                            <a href="/store?category=chairs">Кресла</a>
-                        </li>
-                        <li class="footer-product-category">
-                            <a href="/store?category=beds">Кровати</a>
-                        </li>
-                        <li class="footer-product-category">
-                            <a href="/store?category=walls">Стенки</a>
-                        </li>
-                        <li class="footer-product-category">
-                            <a href="/store?category=crubstones">Тумбы</a>
-                        </li>
+	                    <?php
+
+	                    $args = array(
+		                    'taxonomy'   => "product_cat",
+		                    'number'     => $number,
+		                    'orderby'    => $orderby,
+		                    'order'      => $order,
+		                    'hide_empty' => $hide_empty,
+		                    'include'    => $ids
+	                    );
+	                    $product_categories = get_terms($args);
+
+	                    foreach( $product_categories as $cat )
+	                    {
+		                    if($cat->name === 'Uncategorized')
+			                    continue;
+		                    $link = get_category_link($cat->term_id);
+		                    echo '<li class="footer-product-category">' .
+                            '<a href="' . $link . '">' . $cat->name . '</a> 
+                        </li>';
+	                    }
+	                    ?>
+
                     </ul>
                 </li>
                 <li class="navigation-item-footer">
-                    <a class="navigation-link-footer" href="/info">Оплата / Доставка</a>
+                    <a class="navigation-link-footer" href="<?php echo get_page_link( get_page_by_title( 'Оплата и Доставка' )->ID ); ?>">Оплата / Доставка</a>
                 </li>
                 <li class="navigation-item-footer">
-                    <a class="navigation-link-footer" href="/contacts">Контакты</a>
+                    <a class="navigation-link-footer" href="<?php echo get_page_link( get_page_by_title( 'Контакты' )->ID ); ?>">Контакты</a>
 
                     <ul class="footer-contacts-extended">
                         <li class="footer-contact-phones">
