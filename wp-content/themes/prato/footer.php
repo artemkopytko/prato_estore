@@ -94,7 +94,7 @@
                             <br>
 
                             <a class="notranslate"
-                               href="<?php if( get_field('phone_2_int') ): ?>
+                               href="tel:<?php if( get_field('phone_2_int') ): ?>
                                             <?php the_field('phone_2_int'); ?>
                                         <?php else :?>
                                             +380675445421
