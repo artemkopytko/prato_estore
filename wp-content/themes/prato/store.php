@@ -15,87 +15,41 @@
                 <button>Тумбы</button>
             </div>
             <div class="store-products">
-                <div class="product">
-                    <!--                    IMAGE-->
-                    <div class="product-image"
-                         style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/banner_photo-1.png')"></div>
-                    <h4>Кресло</h4>
-                    <span>Стиль модерн</span>
-                    <p>20 000грн</p>
-                    <a href="/prato/product">Подробнее</a>
-                </div>
-                <div class="product">
-                    <!--                    IMAGE-->
-                    <div class="product-image"
-                         style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/Layer-1-copy.png');"></div>
-                    <h4>Стол</h4>
-                    <span>Стиль модерн</span>
-                    <p>20 000грн</p>
-                    <a href="">Подробнее</a>
-                </div>
-                <div class="product">
-                    <!--                    IMAGE-->
-                    <div class="product-image"
-                         style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/image-15-08-16-06-54-18.png');"></div>
-                    <h4>Тумба</h4>
-                    <span>Стиль модерно</span>
-                    <p>20 000грн</p>
-                    <a href="">Подробнее</a>
-                </div>
-                <div class="product">
-                    <!--                    IMAGE-->
-                    <div class="product-image"
-                         style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/banner_photo-1.png')"></div>
-                    <h4>Кресло</h4>
-                    <span>Стиль модерн</span>
-                    <p>20 000грн</p>
-                    <a href="">Подробнее</a>
-                </div>
-                <div class="product">
-                    <!--                    IMAGE-->
-                    <div class="product-image"
-                         style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/Layer-1-copy.png');"></div>
-                    <h4>Стол</h4>
-                    <span>Стиль модерн</span>
-                    <p>20 000грн</p>
-                    <a href="">Подробнее</a>
-                </div>
-                <div class="product">
-                    <!--                    IMAGE-->
-                    <div class="product-image"
-                         style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/image-15-08-16-06-54-18.png');"></div>
-                    <h4>Тумба</h4>
-                    <span>Стиль модерно</span>
-                    <p>20 000грн</p>
-                    <a href="">Подробнее</a>
-                </div>
-                <div class="product">
-                    <!--                    IMAGE-->
-                    <div class="product-image"
-                         style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/banner_photo-1.png')"></div>
-                    <h4>Кресло</h4>
-                    <span>Стиль модерн</span>
-                    <p>20 000грн</p>
-                    <a href="">Подробнее</a>
-                </div>
-                <div class="product">
-                    <!--                    IMAGE-->
-                    <div class="product-image"
-                         style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/Layer-1-copy.png');"></div>
-                    <h4>Стол</h4>
-                    <span>Стиль модерн</span>
-                    <p>20 000грн</p>
-                    <a href="">Подробнее</a>
-                </div>
-                <div class="product">
-                    <!--                    IMAGE-->
-                    <div class="product-image"
-                         style="background-image: url('http://localhost:8888/prato/wp-content/uploads/2018/04/image-15-08-16-06-54-18.png');"></div>
-                    <h4>Тумба</h4>
-                    <span>Стиль модерно</span>
-                    <p>20 000грн</p>
-                    <a href="">Подробнее</a>
-                </div>
+
+	            <?php
+	            $args = array(
+		            'post_type'      => 'product',
+		            'posts_per_page' => 10,
+//		            'product_cat'    => 'chairs',''
+	            );
+
+	            $loop = new WP_Query( $args );
+
+	            while ( $loop->have_posts() ) : $loop->the_post();
+		            global $product;
+
+		            if ( has_post_thumbnail( $product->id ) ) {
+			            $attachment_ids[0] = get_post_thumbnail_id( $product->id );
+			            $attachment = wp_get_attachment_image_src($attachment_ids[0], 'full' );
+		            }
+
+		            echo '
+                        <div class="product">
+                        <div class="product-image" 
+                        style="background-image: url('. $attachment[0].';)" data-id="'.$product->id.'"></div>
+                        <h4>'.get_the_title().'</h4>
+                        <span>Стиль модерн</span>
+                        <p>'.$product->price.' грн</p>
+                        <a href="'.get_permalink().'">Подробнее</a>
+                        </div>';
+
+
+
+	            endwhile;
+
+	            wp_reset_query();
+	            ?>
+
             </div>
         </div>
     </section>
