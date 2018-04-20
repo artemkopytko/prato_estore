@@ -16,39 +16,39 @@
             </div>
             <div class="store-products">
 
-	            <?php
-	            $args = array(
-		            'post_type'      => 'product',
-		            'posts_per_page' => 10,
+				<?php
+				$args = array(
+					'post_type'      => 'product',
+					'posts_per_page' => 10,
 //		            'product_cat'    => 'chairs',''
-	            );
+				);
 
-	            $loop = new WP_Query( $args );
+				$loop = new WP_Query( $args );
 
-	            while ( $loop->have_posts() ) : $loop->the_post();
-		            global $product;
+				while ( $loop->have_posts() ) : $loop->the_post();
+					global $product;
 
-		            if ( has_post_thumbnail( $product->id ) ) {
-			            $attachment_ids[0] = get_post_thumbnail_id( $product->id );
-			            $attachment = wp_get_attachment_image_src($attachment_ids[0], 'full' );
-		            }
+					if ( has_post_thumbnail( $product->get_id() ) ) {
+						$attachment_ids[0] = get_post_thumbnail_id( $product->get_id() );
+						$attachment = wp_get_attachment_image_src($attachment_ids[0], 'full' );
+					}
 
-		            echo '
+					echo '
                         <div class="product">
                         <div class="product-image" 
-                        style="background-image: url('. $attachment[0].';)" data-id="'.$product->id.'"></div>
+                        style="background-image: url('. $attachment[0].';)" data-id="'.$product->get_id().'"></div>
                         <h4>'.get_the_title().'</h4>
                         <span>Стиль модерн</span>
-                        <p>'.$product->price.' грн</p>
+                        <p>'.$product->get_price().' грн</p>
                         <a href="'.get_permalink().'">Подробнее</a>
                         </div>';
 
 
 
-	            endwhile;
+				endwhile;
 
-	            wp_reset_query();
-	            ?>
+				wp_reset_query();
+				?>
 
             </div>
         </div>
