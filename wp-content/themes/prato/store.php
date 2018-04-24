@@ -17,38 +17,70 @@
             <div class="store-products">
 
 				<?php
+				global $paged;
+
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 				$args = array(
-					'post_type'      => 'product',
-					'posts_per_page' => 10,
-//		            'product_cat'    => 'chairs',''
+					'post_type'=>'product',
+					'posts_per_page' => 1,
+					'paged' => $paged,
 				);
 
 				$loop = new WP_Query( $args );
+				$i = 0;
 
-				while ( $loop->have_posts() ) : $loop->the_post();
-					global $product;
+				if ( $loop->have_posts() ) {
+					while ( $loop->have_posts() ) : $loop->the_post();
 
-					if ( has_post_thumbnail( $product->get_id() ) ) {
-						$attachment_ids[0] = get_post_thumbnail_id( $product->get_id() );
-						$attachment = wp_get_attachment_image_src($attachment_ids[0], 'full' );
-					}
+						global $product;
 
-					echo '
+                        if ( has_post_thumbnail( $product->get_id() ) ) {
+			                $attachment_ids[0] = get_post_thumbnail_id( $product->get_id() );
+			                $attachment        = wp_get_attachment_image_src( $attachment_ids[0], 'full' );
+		                }
+
+//					$product->get_attribute( 'your_attr' );
+
+		                echo '
                         <div class="product">
-                        <div class="product-image" 
-                        style="background-image: url('. $attachment[0].';)" data-id="'.$product->get_id().'"></div>
-                        <h4>'.get_the_title().'</h4>
-                        <span>Стиль модерн</span>
-                        <p>'.$product->get_price().' грн</p>
-                        <a href="'.get_permalink().'">Подробнее</a>
+                        <div class="product-image"
+                        style="background-image: url(' . $attachment[0] . ';)" data-id="' . $product->get_id() . '"></div>
+                        <h4>' . get_the_title() . '</h4>
+                        <span>Стиль ' . $term_array[ $i ] . '</span>
+                        <p>' . $product->get_price() . ' грн</p>
+                        <a href="' . get_permalink() . '">Подробнее</a>
                         </div>';
 
 
+		                $i += 1;
 
-				endwhile;
+					endwhile;
 
-				wp_reset_query();
-				?>
+					$total_pages = $loop->max_num_pages;
+
+					if ( $total_pages > 1 ) {
+
+						$current_page = max( 1, get_query_var( 'paged' ) );
+
+						echo '<div class="pagination">';
+
+						echo paginate_links( array(
+							'base'      => get_pagenum_link( 1 ) . '%_%',
+							'format'    => 'page/%#%',
+							'current'   => $current_page,
+							'total'     => $total_pages,
+							'prev_text' => __( '' ),
+							'next_text' => __( '' ),
+						) );
+
+						echo '</div>';
+					}
+				} else {
+                    echo __( 'No products found' );
+                }
+				wp_reset_postdata();
+                ?>
 
             </div>
         </div>
