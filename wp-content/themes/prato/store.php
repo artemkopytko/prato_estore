@@ -8,11 +8,34 @@
         <div class="container store-content">
             <div class="link-parent"><a href="/prato/">Главная</a> / Каталог Товара</div>
             <div class="store-products-filter">
-                <h2 class="ml-0">Каталог Товара</h2>
-                <button>Кресла</button>
-                <button>Кровати</button>
-                <button>Стенки</button>
-                <button>Тумбы</button>
+                <a class="ml-0 filter-main">Каталог Товара</a>
+	            <?php
+
+	            $number = null;
+	            $orderby = '';
+	            $hide_empty = 0;
+	            $ids = array();
+
+	            $args = array(
+		            'taxonomy'   => "product_cat",
+		            'number'     => $number,
+		            'orderby'    => $orderby,
+		            'order'      => $order,
+		            'hide_empty' => $hide_empty,
+		            'include'    => $ids
+	            );
+	            $product_categories = get_terms($args);
+
+	            foreach( $product_categories as $cat )
+	            {
+		            if($cat->name === 'Uncategorized')
+			            continue;
+		            $link = get_category_link($cat->term_id);
+		            echo
+		                 '<a href="' . $link . '">' . $cat->name . '</a>';
+	            }
+	            ?>
+
             </div>
             <div class="store-products">
 

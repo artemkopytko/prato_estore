@@ -14,15 +14,9 @@
   margin:100px 0;
   justify-content: center;
   align-items: center;
-  h2 {
-    font-family:$generalFont;
-    font-weight: 300;
-    font-size: 14px;
-    text-transform: uppercase;
-    display: flex;
-    margin-right: 30px;
-  }
-  button {
+  a {
+    text-decoration: none;
+    color: #000;
     text-transform: uppercase;
     cursor: pointer;
     font-family:$generalFont;
@@ -46,6 +40,15 @@
       transition: 0.2s all ease;
     }
   }
+}
+
+.filter-main {
+  font-family:$generalFont;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: flex;
+  margin-right: 30px;
 }
 
 .store-products {

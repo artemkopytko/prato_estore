@@ -821,14 +821,9 @@ footer {
   margin: 100px 0;
   justify-content: center;
   align-items: center; }
-  .store-products-filter h2 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    text-transform: uppercase;
-    display: flex;
-    margin-right: 30px; }
-  .store-products-filter button {
+  .store-products-filter a {
+    text-decoration: none;
+    color: #000;
     text-transform: uppercase;
     cursor: pointer;
     font-family: "Open Sans", sans-serif;
@@ -842,7 +837,7 @@ footer {
     -ms-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;
     transition: 0.2s all ease; }
-    .store-products-filter button:hover {
+    .store-products-filter a:hover {
       color: #4cb69f;
       text-decoration: underline;
       -webkit-transition: 0.2s all ease;
@@ -850,6 +845,14 @@ footer {
       -ms-transition: 0.2s all ease;
       -o-transition: 0.2s all ease;
       transition: 0.2s all ease; }
+
+.filter-main {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: flex;
+  margin-right: 30px; }
 
 .store-products {
   width: 100%;
