@@ -76,33 +76,67 @@ get_header();
             <div class="container latest-in-content">
                 <h3>Новые Поступления</h3>
                 <div class="latest-products">
-                    <div class="product">
-                        <!--                    IMAGE-->
+
+
+	                <?php
+	                global $paged;
+
+
+	                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+	                $args = array(
+		                'post_type'=>'product',
+		                'posts_per_page' => 3,
+		                'orderby' =>'date',
+		                'order' => 'DESC'
+	                );
+
+	                $loop = new WP_Query( $args );
+	                $i = 0;
+
+
+	                if ( $loop->have_posts() ) {
+		                $terms = get_terms( 'product_tag' );
+		                $term_array = array();
+		                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+			                foreach ( $terms as $term ) {
+				                $term_array[] = $term->name;
+			                }
+		                }
+		                while ( $loop->have_posts() ) : $loop->the_post();
+
+			                global $product;
+
+
+			                if ( has_post_thumbnail( $product->get_id() ) ) {
+				                $attachment_ids[0] = get_post_thumbnail_id( $product->get_id() );
+				                $attachment        = wp_get_attachment_image_src( $attachment_ids[0], 'full' );
+			                }
+
+//					$product->get_attribute( 'your_attr' );
+
+			                echo '
+                        <div class="product">
                         <div class="product-image"
-                             style="background-image: url('https://pratostore.com/wp-content/uploads/2018/04/banner_photo.png')"></div>
-                        <h4>Кресло</h4>
-                        <span>Стиль модерн</span>
-                        <p>20 000 грн</p>
-                        <a href="/prato/product">Подробнее</a>
-                    </div>
-                    <div class="product">
-                        <!--                    IMAGE-->
-                        <div class="product-image"
-                             style="background-image: url('https://pratostore.com/wp-content/uploads/2018/04/Layer-1-copy-1.png');"></div>
-                        <h4>Стол</h4>
-                        <span>Стиль модерн</span>
-                        <p class="product-price-unknown">узнать цену</p>
-                        <a href="/prato/product">Подробнее</a>
-                    </div>
-                    <div class="product" >
-                        <!--                    IMAGE-->
-                        <div class="product-image"
-                             style="background-image: url('https://pratostore.com/wp-content/uploads/2018/04/image-15-08-16-06-54-18-1.png');"></div>
-                        <h4>Тумба</h4>
-                        <span>Стиль модерн</span>
-                        <p>20 000 грн</p>
-                        <a href="/prato/product">Подробнее</a>
-                    </div>
+                        style="background-image: url(' . $attachment[0] . ';)" data-id="' . $product->get_id() . '"></div>
+                        <h4>' . get_the_title() . '</h4>
+                        <span>Стиль ' . $term_array[ $i ] . '</span>
+                        <p>' . $product->get_price() . ' грн</p>
+                        <a href="' . get_permalink() . '">Подробнее</a>
+                        </div>';
+
+
+			                $i += 1;
+
+		                endwhile;
+
+	                } else {
+		                echo __( 'No products found' );
+	                }
+	                wp_reset_postdata();
+	                ?>
+
+
                 </div>
             </div>
         </section>
