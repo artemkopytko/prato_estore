@@ -9,7 +9,7 @@
 <main>
     <section class="info">
         <div class="container info-content">
-            <div class="link-parent"><a href="/">Главная</a> / Оплата и Доставка</div>
+            <div class="link-parent"><a href="<?echo get_permalink( get_page_by_title( 'Домашняя страница' ) )?>">Главная</a> / Оплата и Доставка</div>
             <h2>Оплата</h2>
             <h3>
 				<?php if( get_field('info_1_heading') ): ?>

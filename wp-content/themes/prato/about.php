@@ -17,7 +17,7 @@
 <main>
     <section class="about">
         <div class="container about-content">
-            <div class="link-parent"><a href="/">Главная</a> / О Нас</div>
+            <div class="link-parent"><a href="<?echo get_permalink( get_page_by_title( 'Домашняя страница' ) )?>">Главная</a> / О Нас</div>
             <p class="about-heading">
 				<?php if( get_field('text_1') ): ?>
 					<?php the_field('text_1'); ?>

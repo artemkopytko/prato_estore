@@ -35,7 +35,7 @@
                     <a class="navigation-link-footer" href="<?php echo get_page_link( get_page_by_title( 'О Нас' )->ID ); ?>">О нас</a>
                 </li>
                 <li class="navigation-item-footer">
-                    <a class="navigation-link-footer" href="<?php echo get_page_link( get_page_by_title( 'Каталог Товаров' )->ID ); ?>">Каталог Товара</a>
+                    <a class="navigation-link-footer" href="<?php echo get_page_link( get_page_by_title( 'Каталог Товара' )->ID ); ?>">Каталог Товара</a>
 
                     <ul class="footer-products-categories">
 	                    <?php
@@ -207,6 +207,71 @@
     </div>
 </section>
 </div> <!-- .wrapper -->
+
+<script>
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").css("left", "-500px");
+    });
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").css("left", "0");
+    });
+
+
+
+
+    var pathname = window.location.pathname;
+    var links;
+    if(pathname === '/' || pathname === '/prato/')
+    {
+        links = document.getElementsByClassName('link-home');
+    }
+    else if (pathname.indexOf('/about/') >= 0)
+    {
+        links = document.getElementsByClassName('link-about');
+    }
+    else if ((pathname.indexOf('/store/') >= 0) || (pathname.indexOf('product-category') >= 0))
+    {
+        links = document.getElementsByClassName('link-store');
+
+        if(pathname.indexOf('product-category') >= 0)
+        {
+            if(pathname.indexOf('walls') >= 0)
+            {
+                document.getElementById('walls-filter').classList.add('active');
+            }
+            else if(pathname.indexOf('chairs') >= 0)
+            {
+                document.getElementById('chairs-filter').classList.add('active');
+            }
+            else if(pathname.indexOf('curbstones') >= 0)
+            {
+                document.getElementById('curbstones-filter').classList.add('active');
+            }
+            else if(pathname.indexOf('beds') >= 0)
+            {
+                document.getElementById('beds-filter').classList.add('active');
+            }
+        }
+    }
+    else if (pathname.indexOf('/info/') >= 0)
+    {
+        links = document.getElementsByClassName('link-info');
+    }
+    else if (pathname.indexOf('/contacts/') >= 0)
+    {
+        links = document.getElementsByClassName('link-contacts');
+    }
+
+    links[0].classList.add('active');
+    links[1].classList.add('active');
+
+
+
+
+</script>
+
 <?php wp_footer(); ?>
 
 </body>

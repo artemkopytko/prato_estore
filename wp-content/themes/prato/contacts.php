@@ -5,7 +5,7 @@
 <main>
     <section class="contacts">
         <div class="container contacts-content">
-            <div class="link-parent"><a href="/">Главная</a> / Контакты</div>
+            <div class="link-parent"><a href="<?echo get_permalink( get_page_by_title( 'Домашняя страница' ) )?>">Главная</a> / Контакты</div>
             <h2>Контакты</h2>
             <p class="paragraph-heading">
 				<?php if( get_field('text_1_contacts') ): ?>

@@ -6,9 +6,9 @@
 <main>
     <section class="store">
         <div class="container store-content">
-            <div class="link-parent"><a href="/prato/">Главная</a> / Каталог Товара</div>
+            <div class="link-parent"><a href="<?echo get_permalink( get_page_by_title( 'Домашняя страница' ) )?>">Главная</a> / Каталог Товара</div>
             <div class="store-products-filter">
-                <a class="ml-0 filter-main">Каталог Товара</a>
+                <a class="ml-0 filter-main active" href="<?echo get_permalink( get_page_by_title( 'Каталог Товара' ) )?>">Каталог Товара</a>
 				<?php
 
 				$number = null;

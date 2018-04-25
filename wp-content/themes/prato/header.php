@@ -169,7 +169,7 @@
                             <a class="link-about navigation-link" href="<?php echo get_page_link( get_page_by_title( 'О Нас' )->ID ); ?>">О нас</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-store navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Каталог Товаров' )->ID ); ?>">Каталог Товара</a>
+                            <a class="link-store navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Каталог Товара' )->ID ); ?>">Каталог Товара</a>
                         </li>
                         <li class="navigation-item">
                             <a class="link-info navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Оплата и Доставка' )->ID ); ?>">Оплата / Доставка</a>
@@ -193,46 +193,6 @@
                 </div>
             </nav>
 
-            <script>
-                $("#menu-close").click(function(e) {
-                    e.preventDefault();
-                    $("#sidebar-wrapper").css("left", "-500px");
-                });
-                $("#menu-toggle").click(function(e) {
-                    e.preventDefault();
-                    $("#sidebar-wrapper").css("left", "0");
-                });
-
-
-
-
-                var pathname = window.location.pathname;
-                var links;
-                if(pathname === '/')
-                {
-                    links = document.getElementsByClassName('link-home');
-                }
-                else if (pathname === '/about/')
-                {
-                    links = document.getElementsByClassName('link-about');
-                }
-                else if (pathname === '/store/')
-                {
-                    links = document.getElementsByClassName('link-store');
-                }
-                else if (pathname === '/info/')
-                {
-                    links = document.getElementsByClassName('link-info');
-                }
-                else if (pathname === '/contacts/')
-                {
-                    links = document.getElementsByClassName('link-contacts');
-                }
-
-                links[0].classList.add('active');
-                links[1].classList.add('active');
-
-            </script>
 
         </section>
 
