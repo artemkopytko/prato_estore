@@ -24,21 +24,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
+
+$category = '';
+if (is_product_category('walls'))
+    $category = 'walls';
+elseif (is_product_category('beds'))
+    $category = 'beds';
+elseif (is_product_category('curbstones'))
+    $category = 'curbstones';
+elseif (is_product_category('chairs'))
+    $category = 'chairs';
+else
+    $category = 'Uncategorized';
 ?>
-
-
-
-<?php //if (is_product_category('walls')) : ?>
-<!--	<p>Стенки</p>-->
-<?php //elseif (is_product_category('beds')) : ?>
-<!--	<p>Кровати</p>-->
-<?php //elseif (is_product_category('curbstones')) : ?>
-<!--	<p>Тумбы</p>-->
-<?php //elseif (is_product_category('chairs')) : ?>
-<!--	<p>Стулья</p>-->
-<?php //else : ?>
-<!--	<p>Неизвестно</p>-->
-<?php //endif; ?>
 
 
     <main>
@@ -104,6 +102,7 @@ get_header();
 						'post_type'=>'product',
 						'posts_per_page' => 21,
 						'paged' => $paged,
+						'product_cat'    => $category,
 					);
 
 					$loop = new WP_Query( $args );
