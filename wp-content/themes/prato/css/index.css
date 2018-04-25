@@ -938,6 +938,7 @@ footer {
 
 .product {
   flex: 1 0 0;
+  max-width: 33.333334%;
   height: 100%;
   display: flex;
   flex-direction: column;

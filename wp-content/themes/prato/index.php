@@ -42,7 +42,7 @@ get_header();
                             ПРИ СОЗДАНИИ КОТОРОЙ ИСПОЛЬЗУЮТСЯ ЛУЧШИЕ МЕТОДЫ СТОЛЯРНОГО МАСТЕРСТВА.
                         </h1>
 					<?php endif; ?>
-                    <a href="/prato/store">Посмотреть</a>
+                    <a href="<?echo get_permalink( get_page_by_title( 'Каталог Товаров' ) )?>">Посмотреть</a>
                 </div>
                 <div class="intro-image">
                     <!--                IMAGE BANNER-->
@@ -69,7 +69,7 @@ get_header();
                         Вы можете сами выбрать цвет и дизайн, либо приобрести готовое изделие.
                     </p>
 				<?php endif; ?>
-                <a href="/prato/about">Читать Дальше</a>
+                <a href="<?echo get_permalink( get_page_by_title( 'О Нас' ) )?>">Читать Дальше</a>
             </div>
         </section>
         <section class="latest-in">

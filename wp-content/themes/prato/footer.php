@@ -131,7 +131,7 @@
                         </li>
                     </ul>
 
-                    <a class="social-footer" href="/contacts">
+                    <a class="social-footer" href="#">
                         <i class="fab fa-facebook-f" style="color: white;"></i>
                     </a>
                 </li>
@@ -139,7 +139,7 @@
         </nav>
 
         <div class="footer-mobile-social">
-            <a class="navigation-link-footer social-footer" href="/contacts">
+            <a class="navigation-link-footer social-footer" href="#">
                 <i class="fab fa-facebook-f" style="color: white;"></i>
             </a>
         </div>
