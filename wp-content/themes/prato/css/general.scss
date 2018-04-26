@@ -820,14 +820,24 @@ footer {
   background-color: $whiteColor;
 }
 
-#menu-close {
+.toggler-row {
+  display: flex;
+  flex-direction: row;
   min-height: 70px;
+}
+
+#menu-close {
+  position: absolute;
+  justify-self: flex-end;
+  width: 30%;
+  align-items: center;
+  display: flex;
+  min-height: 70px;
+  justify-content: center;
+  right: 0;
   svg {
     height: 1.5rem;
     width: 1.5rem;
-    position: absolute;
-    top: 25px;
-    right: 25px;
     color: black;
   }
 }
@@ -867,6 +877,7 @@ footer {
   margin: 0;
   padding: 0;
   li {
+    min-height: 50px;
     position: relative;
     line-height: 50px;
   }

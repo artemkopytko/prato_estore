@@ -119,8 +119,10 @@
                 </div>
                 <div id="sidebar-wrapper">
                     <ul class="sidebar-nav">
-                        <li id="menu-close" class="toggle clearfix">
-                            <i class="fas fa-times"></i>
+                        <li class="toggler-row">
+                            <div id="menu-close">
+                                <i class="fas fa-times"></i>
+                            </div>
                         </li>
                         <li class="navigation-item nav-item-img">
                             <a class="navigation-link" href="/">
