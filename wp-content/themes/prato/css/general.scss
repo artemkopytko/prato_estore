@@ -520,6 +520,34 @@ footer {
   }
 }
 
+.cart-customlocation {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  min-width: 1.75rem;
+}
+.header-top-cart {
+  display: flex;
+  a {
+    color: $whiteColor;
+    text-decoration: none;
+  }
+  span {
+    font-family:$generalFont;
+    font-size: 9px;
+    font-weight: 300;
+    position: absolute;
+    top: 7%;
+  }
+}
+#cart-icon {
+  z-index: 1;
+  width: 1.75rem;
+  height: 1.75rem;
+  position: absolute;
+}
+
 .navigation {
   position: relative;
   height: 70px;

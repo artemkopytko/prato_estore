@@ -99,13 +99,15 @@
                                     </li>
                                 </ul>
                             </div>
-
-                            <!--                            <a href="#" class="lang-en">EN</a>-->
-                            <!--                            <a href="#" class="lang-ua">UA</a>-->
-                            <!--                            <a href="#" class="lang-ru lang-active">RU</a>-->
-                            <!--                            LANGUAGES SUPPORT-->
+                            
                         </div>
                         <div class="header-top-cart">
+
+                            <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>"
+                               title="<?php _e( 'View your shopping cart' ); ?>">
+                                <img src="http://localhost:8888/prato/wp-content/uploads/2018/04/PAID_ICON.png" alt="">
+                                <span><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                            </a>
 
                             <!--                            TODO: WooCommerce Cart here-->
 
