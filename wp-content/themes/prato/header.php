@@ -99,13 +99,17 @@
                                     </li>
                                 </ul>
                             </div>
-                            
+
                         </div>
                         <div class="header-top-cart">
 
                             <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>"
                                title="<?php _e( 'View your shopping cart' ); ?>">
-                                <img src="http://localhost:8888/prato/wp-content/uploads/2018/04/PAID_ICON.png" alt="">
+								<?php if( get_field('basket_image') ): ?>
+                                    <img src="<?php the_field('basket_image'); ?>">
+								<?php else :?>
+                                    <img src="https://pratostore.com/wp-content/uploads/2018/04/PAID_ICON.png" alt="">
+								<?php endif; ?>
                                 <span><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                             </a>
 
@@ -184,13 +188,13 @@
                     </ul>
                     <div class="navigation-search">
                         <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
-<!--                            <label class="screen-reader-text" for="s">--><?php //_e( 'Search for:', 'woocommerce' ); ?><!--</label>-->
+                            <!--                            <label class="screen-reader-text" for="s">--><?php //_e( 'Search for:', 'woocommerce' ); ?><!--</label>-->
                             <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( '', 'placeholder', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Поиск:', 'label', 'woocommerce' ); ?>" />
                             <input type="submit" value="<?php echo esc_attr_x( '', 'submit button', 'woocommerce' ); ?>" />
                             <i class="fas fa-search"></i>
                             <input type="hidden" name="post_type" value="product" />
                         </form>
-<!--                        >-->
+                        <!--                        >-->
                         <!--                    TODO: WooCommerce Search here-->
 
                     </div>
