@@ -56,31 +56,30 @@
 
 
 				if ( $loop->have_posts() ) {
-					$terms = get_terms( 'product_tag' );
-					$term_array = array();
-					if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-						foreach ( $terms as $term ) {
-							$term_array[] = $term->name;
-						}
-					}
-					while ( $loop->have_posts() ) : $loop->the_post();
 
+					while ( $loop->have_posts() ) : $loop->the_post();
 						global $product;
 
+						$terms = get_the_terms( $product->get_id(), 'product_tag' );
+
+						$term_array = array();
+						if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+							foreach ( $terms as $term ) {
+								$term_array[] = $term->name;
+							}
+						}
 
 						if ( has_post_thumbnail( $product->get_id() ) ) {
 							$attachment_ids[0] = get_post_thumbnail_id( $product->get_id() );
 							$attachment        = wp_get_attachment_image_src( $attachment_ids[0], 'full' );
 						}
 
-//					$product->get_attribute( 'your_attr' );
-
 						echo '
                         <div class="product">
                         <div class="product-image"
-                        style="background-image: url(' . $attachment[0] . ';)" data-id="' . $product->get_id() . '"></div>
+                        style="background-image: url(' . $attachment[0] . ')" data-id="' . $product->get_id() . '"></div>
                         <h4>' . get_the_title() . '</h4>
-                        <span>Стиль ' . $term_array[ $i ] . '</span>
+                        <span>Стиль ' . $term_array[0] . '</span>
                         <p>' . $product->get_price() . ' грн</p>
                         <a href="' . get_permalink() . '">Подробнее</a>
                         </div>';

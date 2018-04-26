@@ -841,7 +841,7 @@ footer {
     font-size: 12px;
     outline: none;
     border: none;
-    margin: 10px 0;
+    margin: 10px;
     -webkit-transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -ms-transition: 0.2s all ease;

@@ -231,7 +231,7 @@
     {
         links = document.getElementsByClassName('link-about');
     }
-    else if ((pathname.indexOf('/store/') >= 0) || (pathname.indexOf('product-category') >= 0))
+    else if ((pathname.indexOf('/store/') >= 0) || (pathname.indexOf('/product/') >= 0) || (pathname.indexOf('product-category') >= 0))
     {
         links = document.getElementsByClassName('link-store');
 

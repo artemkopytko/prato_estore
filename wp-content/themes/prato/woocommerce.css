@@ -141,10 +141,7 @@ ul.products li.product .button {
  * Single Product
  */
 .single-product div.product {
-	content: "";
-	display: table;
-	table-layout: fixed;
-	position: relative;
+
 }
 
 .single-product div.product .woocommerce-product-gallery {
