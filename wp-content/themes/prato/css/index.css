@@ -897,6 +897,7 @@ footer {
     max-width: 100%; }
 
 .about {
+  display: flex;
   min-height: 500px;
   position: relative; }
   .about:before {
@@ -909,6 +910,7 @@ footer {
     width: 100%; }
 
 .about-content {
+  align-self: center;
   position: relative;
   height: 100%;
   display: flex;
