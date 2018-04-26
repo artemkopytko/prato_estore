@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' );
 
+
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -109,3 +110,9 @@ do_action( 'woocommerce_after_main_content' );
 do_action( 'woocommerce_sidebar' );
 
 get_footer( 'shop' );
+
+if ( is_search() ) {
+	//put your search results markup here (you can copy some code from archive-product.php file and also from content-product.php to create a standard markup
+} else {
+	// here goes the content that is already in that file (archive-product.php)
+}

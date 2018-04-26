@@ -881,6 +881,13 @@ footer {
       -o-transition: 0.2s all ease;
       transition: 0.2s all ease; }
 
+.result-search {
+  margin-top: 100px; }
+
+.store-products-search {
+  flex-direction: column;
+  padding-bottom: 25px; }
+
 .filter-main {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
