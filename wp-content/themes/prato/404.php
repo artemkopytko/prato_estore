@@ -14,9 +14,9 @@ wp_enqueue_style('aboutUs');
 ?>
 
     <main>
-        <section class="about" >
-            <div class="container about-content" style="align-items: left !important;  padding-top: 40px">
-                <div class="link-parent"><a href="<?echo get_permalink( get_page_by_title( 'Домашняя страница' ) )?>">Главная</a> / 404</div>
+        <section class="about" style="min-height: 500px; display: flex;">
+            <div class="container about-content" style="align-items: left !important;  padding-top: 40px; align-self: center;">
+                <div class="link-parent" style="top: -100px;"><a href="<?echo get_permalink( get_page_by_title( 'Домашняя страница' ) )?>">Главная</a> / 404</div>
 
                 <h1 lang="ru" style="hyphens: auto; word-wrap: break-word">Упс, по Вашему запросу ничего не найдено!</h1>
                 <a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', get_permalink( get_page_by_title( 'Домашняя Страница' ) ) ) )?>">
