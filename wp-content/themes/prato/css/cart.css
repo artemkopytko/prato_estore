@@ -845,7 +845,10 @@ footer {
     top: 0;
     left: 0; } }
 .cart {
-  min-height: 675px; }
+  padding-bottom: 35px; }
+
+.entry-header {
+  display: none; }
 
 .cart-wrapper {
   width: 100%;
@@ -870,6 +873,9 @@ footer {
   flex-direction: row;
   margin-bottom: 20px; }
 
+.update-block {
+  display: none; }
+
 .cart-cell, .cart-cell-big {
   display: flex;
   align-self: flex-start;
@@ -885,14 +891,19 @@ footer {
     font-weight: 300;
     font-size: 14px;
     text-transform: uppercase; }
+  .cart-cell label {
+    display: none; }
   .cart-cell input {
+    max-width: 50%;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     font-weight: 300; }
 
-.cart-item-title {
+.cart-item-title a {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  text-decoration: none;
+  color: #000000; }
 
 .cart-item-desc p, .cart-item-desc span {
   font-family: Helvetica, Arial, sans-serif;
@@ -911,6 +922,7 @@ footer {
   padding-left: 10px; }
 
 .cart-item-image {
+  position: relative;
   margin-top: 25px;
   min-height: 265px;
   min-width: 210px;
@@ -918,6 +930,10 @@ footer {
   -webkit-background-size: 100% 100%;
   background-size: 100%;
   background-position: 0 0; }
+  .cart-item-image a {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
 
 .cart-order {
   position: absolute;
@@ -950,5 +966,45 @@ footer {
 
 .footer {
   min-width: 940px; }
+
+.entry-footer {
+  display: none; }
+
+#secondary {
+  display: none; }
+
+.cart-content-empty {
+  flex-direction: column;
+  padding-top: 50px; }
+  .cart-content-empty h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase; }
+  .cart-content-empty a {
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s; }
+    .cart-content-empty a:hover {
+      transition-delay: 0.2s;
+      color: #4cb69f;
+      transition: all 0.4s ease-out; }
+
+.woocommerce {
+  position: relative; }
+
+.woocommerce-message {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  color: #f1f2f2;
+  z-index: 10000; }
+  .woocommerce-message a {
+    position: relative;
+    cursor: pointer; }
+
+.cart-wrapper .woocommerce-message {
+  top: 10px; }
 
 /*# sourceMappingURL=cart.css.map */

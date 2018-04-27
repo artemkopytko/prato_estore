@@ -114,7 +114,8 @@ $i = 0;
 							<p>Артикул <?php echo $product->get_sku()?></p>
 							<p class="product-price">Цена <?php echo $product->get_price()?> грн</p>
 
-							<a id="addToCart" href="#">Добавить в корзину</a>
+							<a id="addToCart" href="<?php get_permalink($product->get_id())?>?add-to-cart=<?php echo $product->get_id();?>">Добавить в корзину</a>
+<!--							--><?php //echo do_shortcode("[shortcode]"); ?>
 
 						</div>
 					</div>

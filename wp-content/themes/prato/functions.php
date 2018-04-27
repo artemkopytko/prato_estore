@@ -210,6 +210,22 @@ function sdt_remove_ver_css_js( $src ) {
 	return $src;
 }
 
+add_action( 'wp_footer', 'cart_update_qty_script' );
+function cart_update_qty_script() {
+	if (is_cart()) :
+		?>
+		<script type="text/javascript">
+            (function($){
+                $(function(){
+                    $('div.woocommerce').on( 'change', '.qty', function(){
+                        $("[name='update_cart']").trigger('click');
+                    });
+                });
+            })(jQuery);
+		</script>
+		<?php
+	endif;
+}
 
 /**
  * Implement the Custom Header feature.
