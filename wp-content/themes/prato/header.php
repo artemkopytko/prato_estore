@@ -148,7 +148,7 @@
                             <a class="link-about navigation-link" href="<?php echo get_page_link( get_page_by_title( 'О Нас' )->ID ); ?>">О нас</a>
                         </li>
                         <li class="navigation-item">
-                            <a class="link-store navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Каталог Товаров' )->ID ); ?>">Каталог Товара</a>
+                            <a class="link-store navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Каталог Товара' )->ID ); ?>">Каталог Товара</a>
                         </li>
                         <li class="navigation-item">
                             <a class="link-info navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Оплата и Доставка' )->ID ); ?>">Оплата / Доставка</a>

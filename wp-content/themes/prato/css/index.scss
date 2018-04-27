@@ -150,6 +150,7 @@
 }
 
 .product {
+  margin-bottom: 20px;
   flex:1 0 0;
   max-width: 33.333334%;
   height: 100%;
@@ -274,6 +275,9 @@
   .latest-products {
     flex-wrap: wrap;
     min-height: 630px;
+  }
+  .product {
+    max-width: 100%;
   }
   .us-content h2 {
     font-size: 22px;
