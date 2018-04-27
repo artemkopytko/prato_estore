@@ -8,53 +8,23 @@
  */
 
 get_header();
+
+wp_register_style( 'aboutUs', get_template_directory_uri() . '/css/aboutUs.css' );
+wp_enqueue_style('aboutUs');
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+    <main>
+        <section class="about" >
+            <div class="container about-content" style="align-items: left !important;  padding-top: 40px">
+                <div class="link-parent"><a href="<?echo get_permalink( get_page_by_title( 'Домашняя страница' ) )?>">Главная</a> / 404</div>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'prato' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'prato' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'prato' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$prato_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'prato' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$prato_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+                <h1 lang="ru" style="hyphens: auto; word-wrap: break-word">Упс, по Вашему запросу ничего не найдено!</h1>
+                <a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', get_permalink( get_page_by_title( 'Домашняя Страница' ) ) ) )?>">
+		            <?php _e( 'На главную!', 'woocommerce' ) ?>
+                </a>
+            </div>
+        </section>
+    </main>
 
 <?php
 get_footer();
