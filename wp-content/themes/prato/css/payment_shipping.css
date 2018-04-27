@@ -845,8 +845,7 @@ footer {
     top: 0;
     left: 0; } }
 .info {
-  min-height: 625px;
-  padding-bottom: 25px; }
+  padding-bottom: 30px; }
 
 .info-content {
   display: flex;

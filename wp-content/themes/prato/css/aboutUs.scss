@@ -1,7 +1,7 @@
 @import "general";
 
 .about {
-  min-height: 500px;
+  padding-bottom: 30px;
   position: relative;
   &:before {
     position: absolute;
@@ -30,6 +30,9 @@ p {
   font-family:$highlightFont;
   font-size: 14px;
   line-height: 20px;
+  span {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -38,5 +41,15 @@ p {
   }
   .about-heading {
     margin-top: 10px;
+  }
+  p {
+    text-align: left;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    span {
+      display: inline;
+    }
   }
 }

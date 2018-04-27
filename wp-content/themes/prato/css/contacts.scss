@@ -1,7 +1,8 @@
 @import "general";
 
 .contacts {
-  height: 675px;
+  //height: 675px;
+  padding-bottom: 30px;
 }
 
 .contacts-content {
@@ -15,7 +16,7 @@
     font-family:$generalFont;
     font-weight: 300;
     font-size: 13px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-transform: uppercase;
   }
   a {
@@ -26,13 +27,15 @@
     font-size: 12px;
     line-height: 24px;
     font-family:$highlightFont;
-    font-weight: 500;
+  }
+  p {
+    margin: 5px 0;
   }
 
 }
 
 .paragraph-heading {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .contacts-mail {

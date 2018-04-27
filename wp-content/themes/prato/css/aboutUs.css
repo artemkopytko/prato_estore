@@ -845,7 +845,7 @@ footer {
     top: 0;
     left: 0; } }
 .about {
-  min-height: 500px;
+  padding-bottom: 30px;
   position: relative; }
   .about:before {
     position: absolute;
@@ -871,12 +871,23 @@ p {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px; }
+  p span {
+    display: block; }
 
 @media screen and (max-width: 450px) {
   .about {
     padding-top: 85px; }
 
   .about-heading {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+
+  p {
+    text-align: left;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
+    p span {
+      display: inline; } }
 
 /*# sourceMappingURL=aboutUs.css.map */
