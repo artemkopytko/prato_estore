@@ -155,7 +155,7 @@ $i = 0;
 						     style="background-image: url(' . $attachment[0] . ')"></div>
 						<h4>' . $cs_product->get_title() . '</h4>
 						<span>Стиль ' . $term_array[0] . '</span>
-						<p>' . $cs_product->get_price() . ' грн</p>
+						<a class="product-price-unknown" href="' . get_permalink( $cs_product_id ) . '">Узнать цену</a>
 						<a href="' . get_permalink( $cs_product_id ) . '">Подробнее</a>
 						</div>';
 

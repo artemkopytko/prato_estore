@@ -928,7 +928,7 @@ footer {
   min-width: 210px;
   max-width: 100%;
   -webkit-background-size: 100% 100%;
-  background-size: 100%;
+  background-size: cover;
   background-position: 0 0; }
   .cart-item-image a {
     width: 100%;
@@ -989,22 +989,7 @@ footer {
       color: #4cb69f;
       transition: all 0.4s ease-out; }
 
-.woocommerce {
-  position: relative; }
-
 .woocommerce-message {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  color: #f1f2f2;
-  z-index: 10000; }
-  .woocommerce-message a {
-    position: relative;
-    cursor: pointer; }
-
-.cart-wrapper .woocommerce-message {
-  top: 10px; }
+  display: none !important; }
 
 /*# sourceMappingURL=cart.css.map */

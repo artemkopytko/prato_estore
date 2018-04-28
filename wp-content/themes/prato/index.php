@@ -121,9 +121,11 @@ get_header();
                         style="background-image: url(' . $attachment[0] . ';)" data-id="' . $product->get_id() . '"></div>
                         <h4>' . get_the_title() . '</h4>
                         <span>Стиль ' . $term_array[ $i ] . '</span>
-                        <p>' . $product->get_price() . ' грн</p>
+                        <a class="product-price-unknown" href="' . get_permalink() . '">Узнать цену</a>
                         <a href="' . get_permalink() . '">Подробнее</a>
                         </div>';
+
+//			                p class product-price-unknown
 
 
 			                $i += 1;

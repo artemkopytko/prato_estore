@@ -177,13 +177,8 @@
     font-family:$generalFont;
     font-weight: 300;
   }
-  p {
-    text-align: center;
-    display: block;
-    font-family:$generalFont;
-    font-weight: 300;
-  }
-  a {
+
+  a:last-child {
     margin-top: auto;
     margin-bottom: 20px;
     font-weight: 300;
@@ -216,16 +211,29 @@
   height: 410px;
   width: 100%;
   background-position: 0 0;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .product-price-unknown {
-  font-family: $highlightFont;
-  font-weight: 500;
-  cursor: pointer;
+  margin: 1rem 0;
+  text-align: center;
+  display: block;
+  color: #000;
+  font-family:$highlightFont;
   font-size: 14px;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   &:hover {
     text-decoration: underline;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
   }
 }
 

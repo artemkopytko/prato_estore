@@ -967,8 +967,9 @@ footer {
   position: relative; }
 
 .related-product {
-  max-width: 33.333334%;
+  margin-bottom: 20px;
   flex: 1 0 0;
+  max-width: 33.333334%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -990,12 +991,7 @@ footer {
     text-align: center;
     font-family: "Open Sans", sans-serif;
     font-weight: 300; }
-  .related-product p {
-    text-align: center;
-    display: block;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300; }
-  .related-product a {
+  .related-product a:last-child {
     margin-top: auto;
     margin-bottom: 20px;
     font-weight: 300;
@@ -1013,7 +1009,7 @@ footer {
     cursor: pointer;
     transition: all 0.4s ease-out;
     transition-delay: 0.2s; }
-    .related-product a:hover {
+    .related-product a:last-child:hover {
       transition-delay: 0.2s;
       color: #f1f2f2;
       background-color: #4cb69f;
@@ -1026,6 +1022,27 @@ footer {
   width: 100%;
   background-position: 0 0;
   background-size: cover; }
+
+.product-price-unknown {
+  margin: 1rem 0;
+  text-align: center;
+  display: block;
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .product-price-unknown:hover {
+    text-decoration: underline;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
 
 @media screen and (max-width: 450px) {
   .product {

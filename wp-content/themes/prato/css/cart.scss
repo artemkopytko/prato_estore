@@ -104,7 +104,7 @@
   min-width: 210px;
   max-width: 100%;
   -webkit-background-size: 100% 100%;
-  background-size: 100%;
+  background-size: cover;
   background-position: 0 0;
   a {
     width: 100%;
@@ -178,25 +178,6 @@
   }
 }
 
-.woocommerce {
-  position: relative;
-}
-
 .woocommerce-message {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  color: $whiteColor;
-  z-index: 10000;
-  a {
-    position: relative;
-    cursor: pointer;
-  }
-}
-.cart-wrapper {
-  .woocommerce-message {
-    top: 10px;
-  }
+  display: none !important;
 }
