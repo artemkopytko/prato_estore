@@ -108,7 +108,7 @@ do_action( 'woocommerce_before_cart' );
                                         <div class="cart-cell-heading"><p>Цена</p></div>
                                         <div class="cart-cell-content"><span><?php
 												echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
-												?> грн</span></div>
+												?> <span class="notranslate">грн</span></span></div>
                                     </div>
 
 
