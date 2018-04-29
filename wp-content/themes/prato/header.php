@@ -120,14 +120,43 @@
                 </div>
             </div>
             <nav class="navigation">
-                <div class="navbar-toggler" id="menu-toggle">
+                <div class="navbar-toggler" title="menu" id="menu-toggle">
                     <div class="hamburger-inner"></div>
+                </div>
+                <div class="header-mobile-cart">
+
+                    <a class="cart-mobile-customlocation" href="<?php echo wc_get_cart_url(); ?>"
+                       title="<?php _e( 'View your shopping cart' ); ?>">
+			            <?php if( get_field('basket_image') ): ?>
+                            <img src="<?php the_field('basket_image'); ?>">
+			            <?php else :?>
+                            <img src="https://pratostore.com/wp-content/uploads/2018/04/PAID_ICON.png" alt="">
+			            <?php endif; ?>
+                        <span><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                    </a>
+
+                    <!--                            TODO: WooCommerce Cart here-->
+
                 </div>
                 <div id="sidebar-wrapper">
                     <ul class="sidebar-nav">
                         <li class="toggler-row">
                             <div id="menu-close">
                                 <i class="fas fa-times"></i>
+                            </div>
+                        </li>
+                        <li class="navigation-item">
+                            <div class="navigation-search">
+                                <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
+                                    <!--                            <label class="screen-reader-text" for="s">--><?php //_e( 'Search for:', 'woocommerce' ); ?><!--</label>-->
+                                    <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( '', 'placeholder', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Поиск:', 'label', 'woocommerce' ); ?>" />
+                                    <input type="submit" value="<?php echo esc_attr_x( '', 'submit button', 'woocommerce' ); ?>" />
+                                    <i class="fas fa-search"></i>
+                                    <input type="hidden" name="post_type" value="product" />
+                                </form>
+                                <!--                        >-->
+                                <!--                    TODO: WooCommerce Search here-->
+
                             </div>
                         </li>
                         <li class="navigation-item nav-item-img">
@@ -156,9 +185,89 @@
                         <li class="navigation-item">
                             <a class="link-contacts navigation-link" href="<?php echo get_page_link( get_page_by_title( 'Контакты' )->ID ); ?>">Контакты</a>
                         </li>
+
+                        <hr>
+
+                        <li class="navigation-item mobile-phones">
+                            <div class="phone-number">
+                                <span>
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                <a class="notranslate"
+                                   href="tel: <?php if( get_field('phone_1_int') ): ?>
+                                                <?php the_field('phone_1_int'); ?>
+                                    <?php else :?>
+                                        +380504710221
+                                    <?php endif; ?>">
+
+		                            <?php if( get_field('phone_1') ): ?>
+			                            <?php the_field('phone_1'); ?>
+		                            <?php else :?>
+                                        050 471 02 21
+		                            <?php endif; ?>
+                                </a>
+                            </div>
+                            <div class="phone-number">
+                                <span>
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                <a class="notranslate"
+                                   href="tel: <?php if( get_field('phone_2_int') ): ?>
+                                        <?php the_field('phone_2_int'); ?>
+                                    <?php else :?>
+                                        +380675445421
+                                    <?php endif; ?>">
+
+		                            <?php if( get_field('phone_2') ): ?>
+			                            <?php the_field('phone_2'); ?>
+		                            <?php else :?>
+                                        067 544 54 21
+		                            <?php endif; ?>
+
+                                </a>
+                            </div>
+                        </li>
+                        <li class="navigation-item">
+                            <div class="header-top-mail">
+                                <span>
+                                    <i class="far fa-envelope"></i>
+                                </span>
+                                <a href="mailto:<?php if( get_field('email') ): ?>
+                                <?php the_field('email'); ?>
+                            <?php else :?>
+                            pratoaleks@gmail.com
+                            <?php endif; ?>">
+
+			                        <?php if( get_field('email') ): ?>
+				                        <?php the_field('email'); ?>
+			                        <?php else :?>
+                                        pratoaleks@gmail.com
+			                        <?php endif; ?>
+
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="navigation-item">
+                            <div class="header-top-langs">
+                                <div id="flags" class="size18">
+                                    <ul id="sortable" class="ui-sortable" style="float:left">
+                                        <li id="English">
+                                            <a title="English" class="notranslate flag en united-states" data-lang="English">EN</a>
+                                        </li>
+                                        <li id="Russian">
+                                            <a title="Russian" class="notranslate flag ru Russian" data-lang="Russian">RU</a>
+                                        </li>
+                                        <li id="Ukrainian">
+                                            <a title="Ukrainian" class="notranslate flag uk Ukrainian" data-lang="Ukrainian">UA</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="container">
+                <div class="container header-nav-main">
                     <ul class="navigation-list">
                         <li class="navigation-item">
                             <a class="navigation-link" href="/">

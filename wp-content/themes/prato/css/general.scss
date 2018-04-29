@@ -565,7 +565,6 @@ footer {
 }
 
 .navigation-item {
-  height: 70px;
   line-height: 70px;
   display: flex;
   justify-content: center;
@@ -838,14 +837,16 @@ footer {
 }
 
 .hamburger-inner,.hamburger-inner:before,.hamburger-inner:after {
+  margin: 0 auto;
+  left: 0;
   position: absolute;
   width: 40px;
   height: 4px;
   transition-timing-function: ease;
   transition-duration: .15s;
   transition-property: transform;
-  //border-radius: 4px;
-  background-color: $whiteColor;
+  background-color: #f1f2f2;
+  right: 0;
 }
 
 .toggler-row {
@@ -872,6 +873,33 @@ footer {
 
 .navbar-toggler {
   display: none;
+  position: relative;
+  height: 70px;
+  margin-left: 30px;
+  width: 70px;
+}
+
+.header-mobile-cart {
+  display: none;
+}
+.cart-mobile-customlocation {
+  a {
+    color: $whiteColor;
+    text-decoration: none;
+  }
+  span {
+    color: $whiteColor;
+    font-family: $generalFont;
+    font-size: 9px;
+    font-weight: 300;
+    position: absolute;
+    top: 7%;
+  }
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  min-width: 1.75rem;
 }
 
 #sidebar-wrapper {
@@ -884,6 +912,7 @@ footer {
   z-index: 1000;
   margin-left: 0;
   width: 70%;
+  max-width: 300px;
   transition: all 0.5s ease-out 0s;
   -webkit-transition: all 0.5s ease-out 0s;
   -moz-transition: all 0.5s ease-out 0s;
@@ -905,9 +934,9 @@ footer {
   margin: 0;
   padding: 0;
   li {
-    min-height: 50px;
+    min-height: 60px;
     position: relative;
-    line-height: 50px;
+    line-height: 60px;
   }
   a {
     color: black;
@@ -921,6 +950,15 @@ footer {
   }
 }
 
+.phone-number {
+  span {
+    margin-right: 10px;
+  }
+  a {
+    font-family:$generalFont;
+    font-weight: 300;
+  }
+}
 
 .hamburger-inner {
   &:before {
@@ -943,13 +981,32 @@ footer {
 
 @media screen and (max-width: 450px)
 {
+  .header-mobile-cart {
+    margin-right: 30px;
+    display: flex;
+  }
+  .header-nav-main {
+    display: none;
+  }
   .navbar-toggler {
-    display: block;
+    display: flex;
+  }
+  .header-top-mail {
+    margin-left: 20px;
+    span {
+      margin-right: 10px;
+    }
+    a {
+      margin: 0;
+    }
   }
   .navigation {
+    justify-content: space-between;
+    width: 100%;
     background-color: #000;
     position: fixed;
     z-index: 500;
+    display: flex;
   }
   .header-top {
     display: none;
@@ -957,8 +1014,20 @@ footer {
   .navigation-list {
     display: none;
   }
+  .mobile-phones {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
   .navigation-search {
-    display: none;
+    margin-left: 20px;
+  }
+  .ui-sortable {
+    padding-left: 20px;
+  }
+  #flags a {
+    margin-right: 15px !important;
   }
   .nav-item-1 {
     margin-top: 50px;
