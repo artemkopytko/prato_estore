@@ -63,6 +63,7 @@
     font-family:$generalFont;
     font-size: 14px;
     font-weight: 300;
+    border:1px solid lightgray;
   }
 }
 
@@ -180,4 +181,13 @@
 
 .woocommerce-message {
   display: none !important;
+}
+
+@media screen and (max-width: 450px) {
+  .cart-wrapper {
+    margin: 115px;
+  }
+  .cart-content-empty {
+    padding-top: 115px;
+  }
 }
