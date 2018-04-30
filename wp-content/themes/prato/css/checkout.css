@@ -306,19 +306,6 @@ input[type="submit"],
   -webkit-appearance: none !important;
   border-radius: 0 !important; }
 
-textarea,
-input.text,
-input[type="text"],
-input[type="button"],
-input[type="submit"],
-.input-checkbox {
-  -webkit-appearance: none !important;
-  border-radius: 0 !important; }
-
-input {
-  -webkit-appearance: none !important;
-  -webkit-border-radius: 0px !important; }
-
 .active {
   color: #4cb69f !important;
   text-decoration: underline !important; }
@@ -972,9 +959,12 @@ input.search-field {
 
 .order-preview-cell, .order-preview-cell-big {
   position: relative; }
-  .order-preview-cell span, .order-preview-cell-big span {
+  .order-preview-cell span, .order-preview-cell a, .order-preview-cell-big span, .order-preview-cell-big a {
+    text-transform: capitalize;
+    text-decoration: none;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px; }
+    font-size: 14px;
+    color: #000; }
   .order-preview-cell p, .order-preview-cell-big p {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -986,7 +976,7 @@ input.search-field {
   flex: 1 0 0;
   display: flex; }
   .order-preview-cell span {
-    display: block; }
+    display: inline-block; }
   .order-preview-cell input {
     text-align: center;
     width: 60px;
@@ -1029,7 +1019,7 @@ input.search-field {
   .form-row-inputs label {
     align-self: center;
     margin-right: 30px; }
-  .form-row-inputs input[type=text], .form-row-inputs input[type=email], .form-row-inputs textarea, .form-row-inputs .payment-methods {
+  .form-row-inputs input[type=text], .form-row-inputs input[type=tel], .form-row-inputs input[type=email], .form-row-inputs textarea, .form-row-inputs .payment-methods {
     border: 1px solid #000;
     color: #656767;
     padding: 5px 10px;
@@ -1038,6 +1028,9 @@ input.search-field {
   .form-row-inputs textarea {
     resize: vertical;
     min-height: 60px; }
+
+.quantity label {
+  display: none; }
 
 .payment-methods {
   border: none !important; }

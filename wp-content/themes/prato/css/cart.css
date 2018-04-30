@@ -306,19 +306,6 @@ input[type="submit"],
   -webkit-appearance: none !important;
   border-radius: 0 !important; }
 
-textarea,
-input.text,
-input[type="text"],
-input[type="button"],
-input[type="submit"],
-.input-checkbox {
-  -webkit-appearance: none !important;
-  border-radius: 0 !important; }
-
-input {
-  -webkit-appearance: none !important;
-  -webkit-border-radius: 0px !important; }
-
 .active {
   color: #4cb69f !important;
   text-decoration: underline !important; }

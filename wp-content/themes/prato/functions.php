@@ -216,6 +216,38 @@ function cart_update_qty_script() {
 	endif;
 }
 
+
+
+add_filter( 'woocommerce_billing_fields', 'wc_npr_filter_phone', 10, 1 );
+function wc_npr_filter_phone( $address_fields ) {
+	$address_fields['billing_phone']['required'] = true;
+	$address_fields['billing_country']['required'] = false;
+	$address_fields['billing_last_name']['required'] = false;
+	$address_fields['billing_city']['required'] = false;
+	$address_fields['billing_postcode']['required'] = false;
+	$address_fields['billing_email']['required'] = false;
+	$address_fields['billing_state']['required'] = false;
+	$address_fields['billing_address_1']['required'] = false;
+	$address_fields['billing_address_2']['required'] = false;
+	return $address_fields;
+
+}
+
+//make shipping fields not required in checkout
+add_filter( 'woocommerce_shipping_fields', 'wc_npr_filter_shipping_fields', 10, 1 );
+function wc_npr_filter_shipping_fields( $address_fields ) {
+	$address_fields['shipping_first_name']['required'] = false;
+	$address_fields['shipping_last_name']['required'] = false;
+	$address_fields['shipping_address_1']['required'] = false;
+	$address_fields['shipping_address_2']['required'] = false;
+	$address_fields['shipping_city']['required'] = false;
+	$address_fields['shipping_country']['required'] = false;
+	$address_fields['shipping_postcode']['required'] = false;
+	$address_fields['shipping_state']['required'] = false;
+	return $address_fields;
+}
+
+
 /**
  * Implement the Custom Header feature.
  */

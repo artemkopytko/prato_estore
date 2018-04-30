@@ -47,9 +47,12 @@
 
 .order-preview-cell,.order-preview-cell-big {
   position: relative;
-  span {
+  span,a {
+    text-transform: capitalize;
+    text-decoration: none;
     font-family:$highlightFont;
     font-size: 14px;
+    color: #000;
   }
   p {
     font-family:$generalFont;
@@ -64,7 +67,7 @@
   flex:1 0 0;
   display: flex;
   span {
-    display: block;
+    display: inline-block;
   }
   input {
     text-align: center;
@@ -117,7 +120,7 @@
     align-self: center;
     margin-right: 30px;
   }
-  input[type=text],input[type=email],textarea,.payment-methods {
+  input[type=text],input[type=tel],input[type=email],textarea,.payment-methods {
     border: 1px solid #000;
     color: #656767;
     padding: 5px 10px;
@@ -127,6 +130,12 @@
   textarea {
     resize: vertical;
     min-height: 60px;
+  }
+}
+
+.quantity {
+  label {
+    display: none;
   }
 }
 

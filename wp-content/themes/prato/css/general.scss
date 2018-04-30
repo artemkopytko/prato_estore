@@ -361,24 +361,7 @@ input[type="submit"],
 .input-checkbox {
   -webkit-appearance: none !important;
   border-radius: 0 !important;
-
 }
-
-textarea,
-input.text,
-input[type="text"],
-input[type="button"],
-input[type="submit"],
-.input-checkbox {
-  -webkit-appearance: none !important;
-  border-radius: 0 !important;
-}
-
-input {
-  -webkit-appearance:none !important;
-  -webkit-border-radius:0px !important;
-}
-
 
 $generalFont: 'Open Sans', sans-serif;
 $highlightFont: Helvetica, Arial, sans-serif;
