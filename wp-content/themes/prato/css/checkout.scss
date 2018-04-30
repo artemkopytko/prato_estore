@@ -1,5 +1,8 @@
 @import "general";
 
+.entry-header,.woocommerce-info,#secondary {
+  display: none !important;
+}
 
 .checkout-content {
   display: flex;
@@ -114,7 +117,7 @@
     align-self: center;
     margin-right: 30px;
   }
-  input,textarea,.payment-methods {
+  input[type=text],input[type=email],textarea,.payment-methods {
     border: 1px solid #000;
     color: #656767;
     padding: 5px 10px;
