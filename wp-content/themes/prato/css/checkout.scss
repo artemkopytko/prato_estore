@@ -1,6 +1,6 @@
 @import "general";
 
-.entry-header,.woocommerce-info,#secondary {
+.entry-header,.woocommerce-info,#secondary,.entry-footer {
   display: none !important;
 }
 
@@ -200,6 +200,8 @@
     }
   }
 }
+
+
 
 .container {
   max-width: 940px !important;

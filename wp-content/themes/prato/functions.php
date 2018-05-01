@@ -218,33 +218,54 @@ function cart_update_qty_script() {
 
 
 
-add_filter( 'woocommerce_billing_fields', 'wc_npr_filter_phone', 10, 1 );
-function wc_npr_filter_phone( $address_fields ) {
-	$address_fields['billing_phone']['required'] = true;
-	$address_fields['billing_country']['required'] = false;
-	$address_fields['billing_last_name']['required'] = false;
-	$address_fields['billing_city']['required'] = false;
-	$address_fields['billing_postcode']['required'] = false;
-	$address_fields['billing_email']['required'] = false;
-	$address_fields['billing_state']['required'] = false;
-	$address_fields['billing_address_1']['required'] = false;
-	$address_fields['billing_address_2']['required'] = false;
-	return $address_fields;
 
+
+
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+function custom_override_checkout_fields( $fields ) {
+	unset($fields['billing']['billing_last_name']);
+	unset($fields['billing']['billing_company']);
+	unset($fields['billing']['billing_address_2']);
+	unset($fields['billing']['billing_city']);
+	unset($fields['billing']['billing_postcode']);
+//	unset($fields['billing']['billing_country']);
+	unset($fields['billing']['billing_state']);
+	unset($fields['order']['order_comments']);
+	unset($fields['billing']['billing_address_2']);
+	unset($fields['billing']['billing_postcode']);
+	unset($fields['billing']['billing_company']);
+	unset($fields['billing']['billing_last_name']);
+	unset($fields['billing']['billing_city']);
+	return $fields;
 }
 
-//make shipping fields not required in checkout
-add_filter( 'woocommerce_shipping_fields', 'wc_npr_filter_shipping_fields', 10, 1 );
-function wc_npr_filter_shipping_fields( $address_fields ) {
-	$address_fields['shipping_first_name']['required'] = false;
-	$address_fields['shipping_last_name']['required'] = false;
-	$address_fields['shipping_address_1']['required'] = false;
-	$address_fields['shipping_address_2']['required'] = false;
-	$address_fields['shipping_city']['required'] = false;
-	$address_fields['shipping_country']['required'] = false;
-	$address_fields['shipping_postcode']['required'] = false;
-	$address_fields['shipping_state']['required'] = false;
+
+add_filter( 'woocommerce_default_address_fields' , 'filter_default_address_fields', 20, 1 );
+function filter_default_address_fields( $address_fields ) {
+	// Only on checkout page
+	if( ! is_checkout() ) return $address_fields;
+
+	// All field keys in this array
+	$key_fields = array('country','first_name','last_name','company','address_1','address_2','city','state','postcode');
+
+	// Loop through each address fields (billing and shipping)
+	foreach( $key_fields as $key_field )
+		$address_fields[$key_field]['required'] = false;
+
 	return $address_fields;
+}
+
+// For billing email and phone - Make them not required
+add_filter( 'woocommerce_billing_fields', 'filter_billing_fields', 20, 1 );
+function filter_billing_fields( $billing_fields ) {
+	// Only on checkout page
+	if( ! is_checkout() ) return $billing_fields;
+
+	$billing_fields['billing_phone']['required'] = true;
+	$billing_fields['billing_first_name']['required'] = true;
+	$billing_fields['billing_email']['required'] = false;
+	return $billing_fields;
 }
 
 

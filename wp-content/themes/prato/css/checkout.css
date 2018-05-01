@@ -919,7 +919,7 @@ input.search-field {
     margin-bottom: 25px;
     top: 0;
     left: 0; } }
-.entry-header, .woocommerce-info, #secondary {
+.entry-header, .woocommerce-info, #secondary, .entry-footer {
   display: none !important; }
 
 .checkout-content {
