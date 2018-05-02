@@ -42,7 +42,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 }
 
 ?>
-
+<meta name="viewport" content="">
 <main>
     <section class="checkout">
         <div class="container checkout-content">

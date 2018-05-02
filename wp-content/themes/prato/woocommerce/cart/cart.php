@@ -28,6 +28,7 @@ wp_register_style( 'cart', get_template_directory_uri() . '/css/cart.css' );
 do_action( 'woocommerce_before_cart' );
 ?>
 
+<meta name="viewport" content="">
 <main>
     <section class="cart">
         <div class="container cart-content">

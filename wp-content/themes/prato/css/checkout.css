@@ -1088,4 +1088,8 @@ input.search-field {
 .footer {
   min-width: 940px; }
 
+@media screen and (max-width: 450px) {
+  .link-parent {
+    margin-top: 100px; } }
+
 /*# sourceMappingURL=checkout.css.map */
