@@ -142,6 +142,7 @@ $i = 0;
 									$term_array[] = $term->name;
 								}
 							}
+
 							$cs_product = wc_get_product( $cs_product_id );
 
 							if ( has_post_thumbnail( $cs_product_id ) ) {

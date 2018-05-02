@@ -110,17 +110,19 @@ else
 
 
 					if ( $loop->have_posts() ) {
-						$terms = get_terms( 'product_tag' );
-						$term_array = array();
-						if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-							foreach ( $terms as $term ) {
-								$term_array[] = $term->name;
-							}
-						}
+
 						while ( $loop->have_posts() ) : $loop->the_post();
 
 							global $product;
 
+							$terms = get_the_terms( $product->get_id(), 'product_tag' );
+
+							$term_array = array();
+							if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+								foreach ( $terms as $term ) {
+									$term_array[] = $term->name;
+								}
+							}
 
 							if ( has_post_thumbnail( $product->get_id() ) ) {
 								$attachment_ids[0] = get_post_thumbnail_id( $product->get_id() );
