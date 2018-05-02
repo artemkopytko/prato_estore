@@ -205,8 +205,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                                         <input id="payment_method_bacs" type="radio" name="payment_method" value="bacs"
                                                data-order_button_text="">
                                         <label for="payment_method_bacs">
-                                            <img src="http://localhost:8888/prato/wp-content/uploads/2018/04/Visa_Inc._logo.png" alt="">
-                                            <img src="http://localhost:8888/prato/wp-content/uploads/2018/04/640px-MasterCard_logo.png" alt="">
+                                            <img src="https://pratostore.com/wp-content/uploads/2018/04/Visa_Inc._logo-1.png" alt="">
+                                            <img src="https://pratostore.com/wp-content/uploads/2018/04/640px-MasterCard_logo-1.png" alt="">
                                         </label>
                                     </div>
                                 </div>
