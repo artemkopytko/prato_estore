@@ -212,24 +212,25 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                                 </div>
                             </div>
                         </div>
-<!--                    TODO: STYING OF BUTTON-->
 <!--                    TODO: MOBILE VERSION-->
-                    <div class="form-row place-order">
+                    <div class="form-buttons">
+                        <a href="<?echo get_permalink( get_page_by_title( 'Cart' ) )?>">В Корзину</a>
                         <noscript>
-			                <?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'woocommerce' ); ?>
-                            <br/><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
+		                    <?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'woocommerce' ); ?>
+                            <br/><button type="submit" class="" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
                         </noscript>
 
-		                <?php wc_get_template( 'checkout/terms.php' ); ?>
+	                    <?php wc_get_template( 'checkout/terms.php' ); ?>
 
-		                <?php do_action( 'woocommerce_review_order_before_submit' ); ?>
+	                    <?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		                <?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Заказать" data-value="Заказать">Заказать</button>' ); // @codingStandardsIgnoreLine ?>
+	                    <?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="" name="woocommerce_checkout_place_order" id="place_order" value="Заказать" data-value="Заказать">Заказать</button>' ); // @codingStandardsIgnoreLine ?>
 
-		                <?php do_action( 'woocommerce_review_order_after_submit' ); ?>
+	                    <?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
-		                <?php wp_nonce_field( 'woocommerce-process_checkout' ); ?>
+	                    <?php wp_nonce_field( 'woocommerce-process_checkout' ); ?>
                     </div>
+
 
 
                         <div class="countryblock" style="display: none !important;">
