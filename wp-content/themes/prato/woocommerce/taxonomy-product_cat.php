@@ -134,7 +134,7 @@ else
 							echo '
                         <div class="product">
                         <div class="product-image"
-                        style="background-image: url(' . $attachment[0] . ';)" data-id="' . $product->get_id() . '"></div>
+                        style="background-image: url(' . $attachment[0] . ')" data-id="' . $product->get_id() . '"></div>
                         <h4>' . get_the_title() . '</h4>
                         <span>Стиль ' . $term_array[ $i ] . '</span>
                         <p>' . $product->get_price() . ' грн</p>
