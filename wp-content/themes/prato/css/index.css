@@ -1102,7 +1102,7 @@ input.search-field {
   z-index: -1;
   height: 410px;
   width: 100%;
-  background-position: 0 0;
+  background-position: 50% 50%;
   background-size: cover; }
 
 .product-price-unknown {

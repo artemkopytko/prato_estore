@@ -49,7 +49,7 @@ get_header();
 					<?php if( get_field('image_block1') ): ?>
                         <img src="<?php the_field('image_block1'); ?>">
 					<?php else :?>
-                        <img src="https://pratostore.com/wp-content/uploads/2018/04/banner_photo.png" alt="">
+                        <img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.23.55.jpg" alt="">
 					<?php endif; ?>
 
                 </div>
