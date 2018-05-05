@@ -248,8 +248,6 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
   outline-offset: -2px;
   /* 2 */ }
 
@@ -302,6 +300,7 @@ input.text,
 input[type="text"],
 input[type="button"],
 input[type="submit"],
+input[type="search"],
 .input-checkbox {
   -webkit-appearance: none !important;
   border-radius: 0 !important; }
@@ -555,6 +554,7 @@ footer {
     z-index: 100; }
 
 input.search-field {
+  -webkit-appearance: none !important;
   border-radius: 0px !important; }
 
 .footer {
@@ -920,7 +920,8 @@ input.search-field {
     top: 0;
     left: 0; } }
 .intro {
-  min-height: 675px; }
+  min-height: 675px;
+  width: 100%; }
 
 .intro-content {
   height: 100%;
@@ -934,8 +935,7 @@ input.search-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  width: 41%; }
+  flex: 4 0 0; }
   .intro-info h1 {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 24px;
@@ -964,7 +964,7 @@ input.search-field {
       transition: all 0.4s ease-out; }
 
 .intro-image {
-  width: 59%;
+  flex: 6 0 0;
   height: 100%;
   position: relative; }
   .intro-image img {
@@ -1152,6 +1152,7 @@ input.search-field {
     flex-direction: column; }
 
   .intro-info {
+    min-height: 500px;
     width: 100%;
     text-align: center;
     margin-bottom: 25px;
@@ -1168,7 +1169,7 @@ input.search-field {
     min-height: 630px; }
 
   .product {
-    max-width: 100%; }
+    min-width: 100%; }
 
   .us-content h2 {
     font-size: 22px; } }

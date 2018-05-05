@@ -2,6 +2,7 @@
 
 .intro {
   min-height: 675px;
+  width: 100%;
 }
 
 .intro-content {
@@ -17,8 +18,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  width:41%;
+  flex:4 0 0;
+  //width:41%;
   h1 {
     font-family: $highlightFont;
     font-size: 24px;
@@ -51,7 +52,8 @@
 }
 
 .intro-image {
-  width: 59%;
+  //width: 59%;
+  flex:6 0 0;
   height: 100%;
   position: relative;
   img {
@@ -269,6 +271,7 @@
     flex-direction: column;
   }
   .intro-info {
+    min-height: 500px;
     width: 100%;
     text-align: center;
     margin-bottom: 25px;
@@ -286,9 +289,10 @@
     min-height: 630px;
   }
   .product {
-    max-width: 100%;
+    min-width: 100%;
   }
   .us-content h2 {
     font-size: 22px;
   }
 }
+

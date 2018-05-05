@@ -248,8 +248,6 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
   outline-offset: -2px;
   /* 2 */ }
 
@@ -302,6 +300,7 @@ input.text,
 input[type="text"],
 input[type="button"],
 input[type="submit"],
+input[type="search"],
 .input-checkbox {
   -webkit-appearance: none !important;
   border-radius: 0 !important; }
@@ -555,6 +554,7 @@ footer {
     z-index: 100; }
 
 input.search-field {
+  -webkit-appearance: none !important;
   border-radius: 0px !important; }
 
 .footer {
