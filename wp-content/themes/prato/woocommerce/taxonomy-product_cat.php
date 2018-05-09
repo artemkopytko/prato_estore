@@ -118,7 +118,7 @@ else
 							$terms = get_the_terms( $product->get_id(), 'product_tag' );
 
 							$term_array = array();
-							if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+							if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 								foreach ( $terms as $term ) {
 									$term_array[] = $term->name;
 								}
@@ -136,7 +136,7 @@ else
                         <div class="product-image"
                         style="background-image: url(' . $attachment[0] . ')" data-id="' . $product->get_id() . '"></div>
                         <h4>' . get_the_title() . '</h4>
-                        <span>Стиль ' . $term_array[ $i ] . '</span>
+                        <span>Стиль ' . $term_array[ 0 ] . '</span>
                         <p>' . $product->get_price() . ' грн</p>
                         <a href="' . get_permalink() . '">Подробнее</a>
                         </div>';
