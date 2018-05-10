@@ -14,8 +14,14 @@
  */
 
 get_header();
-?>
 
+?>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
 
     <style>
         <?php if( get_field('background_about') ): ?>
@@ -55,6 +61,92 @@ get_header();
                 </div>
             </div>
         </section>
+        <section class="slider">
+            <div class="container slider-container">
+                <div class="slider slider-for">
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/banner_photo.png" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.24.08.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.24.02.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.23.55.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/DSC_0238.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/DSC_0484.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-04-at-8.50.59-PM.png" alt=""></div>
+                </div>
+                <div class="slider slider-nav">
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/banner_photo.png" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.24.08.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.24.02.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.23.55.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/DSC_0238.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/DSC_0484.jpg" alt=""></div>
+                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-04-at-8.50.59-PM.png" alt=""></div>
+                </div>
+            </div>
+
+            <script>
+
+                function initSlider(){
+                    $('.slider-for').slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        fade: true,
+                        asNavFor: '.slider-nav',
+                        cssEase: 'linear'
+                    });
+                    $('.slider-nav').slick({
+                        slidesToShow: 5,
+                        slidesToScroll: 2,
+                        asNavFor: '.slider-for',
+                        dots: true,
+                        centerMode: true,
+                        focusOnSelect: true,
+                        arrows: true,
+                        autoplay: true,
+                        autoplaySpeed: 7000,
+                        responsive: [
+                            {
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 5,
+                                    slidesToScroll: 2,
+                                    dots: true
+                                }
+                            },
+                            {
+                                breakpoint: 777,
+                                settings: {
+                                    slidesToShow: 4,
+                                    slidesToScroll: 2,
+                                    dots: true
+                                }
+                            },
+                            {
+                                breakpoint: 600,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 2
+                                }
+                            },
+                            {
+                                breakpoint: 450,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+                                    arrows: false
+                                }
+                            }
+                        ]
+                    });
+                }
+
+                $(document).ready(function(){
+                    initSlider();
+                });
+
+            </script>
+        </section>
+
         <section class="about">
             <div class="container about-content">
                 <h2>О Нас</h2>
@@ -170,6 +262,6 @@ get_header();
             </div>
         </section>
     </main>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
 <?php
 get_footer();
