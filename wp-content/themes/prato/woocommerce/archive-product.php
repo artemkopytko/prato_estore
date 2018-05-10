@@ -52,19 +52,48 @@ $args = array(
                 <a href="<?echo get_permalink( get_page_by_title( 'Домашняя страница' ) )?>">Главная</a> / <?php echo get_query_var('s');?></div>
 
             <div class="result-search">
+                <style>
+                    @media screen and (max-width: 450px) {
+                        .result-search {
+                            margin-top: 0 !important;
+                        }
+                    }
+                </style>
                 <?php
 
                 // The Query
                 $the_query = new WP_Query( $args );
                 if ( $the_query->have_posts() ) {
                     _e("<h2 style='font-weight:bold;color:#000'>Результаты поиска для: ".get_query_var('s')."</h2>");
-                    echo '<ul class="store-products-search">';
+                    echo '<ul class="store-products-search" style="display: flex; flex-direction: row; flex-wrap: wrap; padding-left: 0;">';
                     while ( $the_query->have_posts() ) {
+                        global $product;
+
                         $the_query->the_post();
-                        ?>
-                        <li>
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        </li>
+
+                        $terms = get_the_terms( $product->get_id(), 'product_tag' );
+
+                        $term_array = array();
+                        if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+                        foreach ( $terms as $term ) {
+                        $term_array[] = $term->name;
+                        }
+                        }
+
+                        if ( has_post_thumbnail( $product->get_id() ) ) {
+                        $attachment_ids[0] = get_post_thumbnail_id( $product->get_id() );
+                        $attachment        = wp_get_attachment_image_src( $attachment_ids[0], 'full' );
+                        }
+
+                        echo '
+                        <div class="product">
+                            <div class="product-image"
+                                 style="background-image: url(' . $attachment[0] . ')" data-id="' . $product->get_id() . '"></div>
+                            <h4>' . get_the_title() . '</h4>
+                            <span>Стиль ' . $term_array[0] . '</span>
+                            <p>' . $product->get_price() . ' грн</p>
+                            <a href="' . get_permalink() . '">Подробнее</a>
+                        </div>';?>
                         <?php
                     }
                     echo '</ul>';

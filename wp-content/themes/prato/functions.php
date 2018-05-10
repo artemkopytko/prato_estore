@@ -268,6 +268,18 @@ function filter_billing_fields( $billing_fields ) {
 	return $billing_fields;
 }
 
+function SearchFilter($query) {
+	if ( $query->is_search && !is_woocommerce()) {
+		$query->set( 'post_type', 'post' );
+	}
+	if ( function_exists( 'is_woocommerce' ) ) :
+		if ( $query->is_search && is_woocommerce() ) {
+			$query->set( 'post_type', 'product' );
+		}
+	endif;
+	return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
 
 /**
  * Implement the Custom Header feature.
