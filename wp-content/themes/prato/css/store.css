@@ -1038,7 +1038,8 @@ input.search-field {
   z-index: -1;
   height: 410px;
   width: 100%;
-  background-size: cover; }
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 .pagination {
   position: absolute;

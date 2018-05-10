@@ -976,8 +976,8 @@ input.search-field {
   max-width: 50%; }
 
 .product-image {
-  background-size: cover;
-  background-position: 50% 50%; }
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 .product-main-desc h1, .product-main-desc p {
   text-transform: uppercase;
@@ -1095,8 +1095,8 @@ input.search-field {
   z-index: -1;
   height: 410px;
   width: 100%;
-  background-position: 50% 50%;
-  background-size: cover; }
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 .product-price-unknown {
   margin: 1rem 0;

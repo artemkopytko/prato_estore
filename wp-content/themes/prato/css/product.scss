@@ -68,8 +68,8 @@
 }
 
 .product-image {
-  background-size: cover;
-  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .product-main-desc {
@@ -213,8 +213,8 @@
   z-index: -1;
   height: 410px;
   width: 100%;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 
 }
 

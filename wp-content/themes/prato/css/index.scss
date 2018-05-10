@@ -3,11 +3,13 @@
 .intro {
   min-height: 675px;
   width: 100%;
+  display: flex;
 }
 
 .intro-content {
   height: 100%;
   display: flex;
+  align-self: center;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -212,9 +214,8 @@
   z-index: -1;
   height: 410px;
   width: 100%;
-  background-position: 50% 50%;
-  background-size: cover;
-
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .product-price-unknown {
