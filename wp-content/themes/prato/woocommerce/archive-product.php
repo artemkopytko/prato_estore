@@ -58,6 +58,35 @@ $args = array(
                             margin-top: 0 !important;
                         }
                     }
+
+                    .product-price-unknown {
+                        margin: 1rem 0 !important;
+                        text-align: center !important;
+                        display: block !important;
+                        color: #000 !important;
+                        text-transform: none !important;
+                        font-family:'Helvetica','sans-serif' !important;
+                        font-size: 14px !important;
+                        text-decoration: none !important;
+                        font-weight: 400 !important;
+                        border: none !important;
+                        -webkit-transition: all 0.2s ease;
+                        -moz-transition: all 0.2s ease;
+                        -ms-transition: all 0.2s ease;
+                        -o-transition: all 0.2s ease;
+                        transition: all 0.2s ease;
+
+                    }
+                    .product-price-unknown:hover {
+                         text-decoration: underline !important;
+                         -webkit-transition: all 0.2s ease;
+                         -moz-transition: all 0.2s ease;
+                         -ms-transition: all 0.2s ease;
+                         -o-transition: all 0.2s ease;
+                         transition: all 0.2s ease;
+                        background-color: #fff !important;
+                     }
+
                 </style>
                 <?php
 
@@ -91,7 +120,7 @@ $args = array(
                                  style="background-image: url(' . $attachment[0] . ')" data-id="' . $product->get_id() . '"></div>
                             <h4>' . get_the_title() . '</h4>
                             <span>Стиль ' . $term_array[0] . '</span>
-                            <p>' . $product->get_price() . ' грн</p>
+                            <a class="product-price-unknown" href="' . get_permalink() . '">Узнать цену</a>
                             <a href="' . get_permalink() . '">Подробнее</a>
                         </div>';?>
                         <?php
