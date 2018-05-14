@@ -39,10 +39,18 @@ get_header();
         <section class="intro">
             <div class="container intro-content">
                 <div class="intro-info">
+                    <style>
+                        @font-face {
+                            font-family: Akrobat;
+                            src: url(https://pratostore.com/Akrobat-Regular.otf);
+                        }
+
+                    </style>
 					<?php if( get_field('heading_text_block1') ): ?>
-                        <h1><?php the_field('heading_text_block1'); ?></h1>
+                        <h1 style="font-family: Akrobat, 'Open Sans', Arial;">
+                            <?php the_field('heading_text_block1'); ?></h1>
 					<?php else :?>
-                        <h1>
+                        <h1 style="font-family: Akrobat, 'Open Sans', Arial;">
                             ПРОФЕССИОНАЛИЗМ – КЛЮЧЕВОЕ СЛОВО,
                             КОГДА РЕЧЬ ИДЕТ О МЕБЕЛИ “PRATO”,
                             ПРИ СОЗДАНИИ КОТОРОЙ ИСПОЛЬЗУЮТСЯ ЛУЧШИЕ МЕТОДЫ СТОЛЯРНОГО МАСТЕРСТВА.
