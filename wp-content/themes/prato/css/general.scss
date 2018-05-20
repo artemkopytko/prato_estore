@@ -370,7 +370,7 @@ $whiteColor: #f1f2f2;
 
 .active {
 
-  color: $highlightColor !important;
+  color: #2e005e !important;
   text-decoration: underline !important;
 }
 
@@ -609,7 +609,7 @@ footer {
     max-height: 50px;
   }
   &:hover {
-    color: $highlightColor;
+    color: #2e005e;
     text-decoration: underline;
     -webkit-transition: 0.2s color ease;
     -moz-transition: 0.2s color ease;
@@ -729,7 +729,7 @@ input.search-field {
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease;
     &:hover {
-      color: $highlightColor;
+      color: #2e005e;
       text-decoration: underline;
       -webkit-transition: 0.3s all ease;
       -moz-transition: 0.3s all ease;
@@ -758,7 +758,7 @@ input.search-field {
   transition: 0.3s all ease;
   &:hover {
     text-decoration: underline;
-    color: $highlightColor;
+    color: #2e005e;
     -webkit-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
     -ms-transition: 0.3s all ease;
@@ -823,7 +823,7 @@ input.search-field {
     color: #000;
     margin-top: 25px;
     &:hover {
-      color: $highlightColor;
+      color: #2e005e;
       text-decoration: underline;
       -webkit-transition: 0.3s all ease;
       -moz-transition: 0.3s all ease;

@@ -1,7 +1,8 @@
 @import "general";
 
 .intro {
-  min-height: 675px;
+  //min-height: 675px;
+  padding: 25px 0;
   width: 100%;
   display: flex;
 }
@@ -25,7 +26,8 @@
   h1 {
     font-family: $highlightFont;
     font-size: 24px;
-    font-weight: bolder;
+    font-weight: bold;
+    color: #2e005e;
     line-height: 48px;
   }
   a {
@@ -64,81 +66,7 @@
   }
 }
 
-.slider-for {
-  //border: 1px solid #000;
-}
 
-.slider-for,.slider-nav {
-  position: relative;
-  div {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    position: relative;
-    img {
-      max-height: 100%;
-      max-width: 100%;
-      height: auto;
-      width: auto;
-    }
-  }
-
-}
-
-.slider-container {
-  flex-direction: column;
-  padding:25px 0;
-}
-
-.slick-prev, .slick-next {
-  //color: #000 !important;
-  line-height:25px;
-  width: 25px;
-  height: 25px;
-  font-weight: 100;
-}
-
-.slick-next,.slick-prev {
-  &:before {
-    color: #000 !important;
-  }
-}
-
-.slick-initialized .slick-slide {
-  display: flex !important;
-}
-
-.slick-prev {
-  &:before {
-    content: '\3008' !important;
-  }
-}
-
-.slick-next {
-  &:before {
-    content: '\3009' !important;
-  }
-}
-
-.slider-for {
-  .slick-slide {
-    display: flex;
-    justify-content: center;
-    height: 400px;
-    //min-height: 400px;
-    align-items: center;
-  }
-}
-
-.slider-nav {
-  margin-top: 10px;
-  .slick-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
-  }
-}
 
 .about {
   display: flex;
@@ -257,37 +185,144 @@
     font-family:$generalFont;
     font-weight: 300;
   }
+}
 
-  a:last-child {
-    margin-top: auto;
-    margin-bottom: 20px;
-    font-weight: 300;
-    font-size: 14px;
-    width: 220px;
-    height: 40px;
-    align-self:center;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family:$generalFont;
-    border: 1px solid #000;
-    color: #000;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.4s ease-out;
+.more-info {
+  margin-top: auto;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 14px;
+  width: 220px;
+  height: 40px;
+  align-self: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: $generalFont;
+  border: 1px solid #000;
+  color: #000;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  transition-delay: 0.2s;
+  &:hover {
     transition-delay: 0.2s;
-    &:hover {
-      transition-delay: 0.2s;
-      color: $whiteColor;
-      background-color: $highlightColor;
-      border:1px solid $highlightColor;
-      transition: all 0.4s ease-out;
+    color: $whiteColor;
+    background-color: $highlightColor;
+    border: 1px solid $highlightColor;
+    transition: all 0.4s ease-out;
+  }
+}
+.popup {
+  display: flex;
+  left:-999999px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  //height: 90%;
+  height: 100%;
+  width: 100%;
+  //width: 75%;
+  top: 0;
+  //left: 0;
+  background-color: rgba(0,0,0,0.2);
+  //margin: 0 auto;
+  //background: white;
+  //border-radius: 7px;
+  //-webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+  //-moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+  //box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+  z-index: 100000;
+}
+.popup-window {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.slider-for,.slider-nav {
+  position: relative;
+  div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      height: auto;
+      width: auto;
     }
+  }
+
+}
+
+.slider-container {
+  flex-direction: column;
+  padding-top:25px;
+  height: 100%;
+  justify-content:space-between;
+}
+
+.slick-prev, .slick-next {
+  line-height:25px;
+  width: 25px;
+  height: 25px;
+  font-weight: 100;
+}
+
+.slick-next,.slick-prev {
+  &:before {
+    color: #000 !important;
   }
 }
 
+.slick-initialized .slick-slide {
+  display: flex !important;
+}
+
+.slick-prev {
+  &:before {
+    content: '\3008' !important;
+  }
+}
+
+.slick-next {
+  &:before {
+    content: '\3009' !important;
+  }
+}
+
+.slider-for {
+  display: flex;
+  flex:3 0 0;
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    //min-height: 400px;
+    align-items: center;
+  }
+}
+
+.slider-nav {
+  display: flex;
+  flex:2 0 0;
+  margin-top: 10px;
+  .slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //min-height: 200px;
+    height: 150px;
+  }
+}
+
+
 .product-image {
-  z-index: -1;
+  z-index: 1;
   height: 410px;
   width: 100%;
   background-size: contain;

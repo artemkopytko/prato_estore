@@ -16,6 +16,12 @@
 get_header();
 
 ?>
+
+<?php
+// Turn off all error reporting
+error_reporting(0);
+?>
+
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -41,22 +47,32 @@ get_header();
                 <div class="intro-info">
                     <style>
                         @font-face {
-                            font-family: Akrobat;
-                            src: url(https://pratostore.com/Akrobat-Regular.otf);
+                            font-family: 'Akrobat';
+                            src: url('https://pratostore.com/Akrobat-Regular.otf') format('opentype');
+                            font-weight: normal;
+                            font-style: normal;
                         }
+
+                        @font-face {
+                            font-family: 'Akrobat';
+                            src: url('https://pratostore.com/Akrobat-Bold.otf') format('opentype');
+                            font-weight: bold;
+                            font-style: normal;
+                        }
+
 
                     </style>
 					<?php if( get_field('heading_text_block1') ): ?>
-                        <h1 style="font-family: Akrobat, 'Open Sans', Arial;">
+                        <h1 style="font-family: 'Akrobat', 'Helvetica Neue' , Arial, Times, sans-serif;">
                             <?php the_field('heading_text_block1'); ?></h1>
 					<?php else :?>
-                        <h1 style="font-family: Akrobat, 'Open Sans', Arial;">
+                        <h1 style="font-family: 'Akrobat', 'Helvetica Neue' , Arial, Times, sans-serif;">
                             ПРОФЕССИОНАЛИЗМ – КЛЮЧЕВОЕ СЛОВО,
                             КОГДА РЕЧЬ ИДЕТ О МЕБЕЛИ “PRATO”,
                             ПРИ СОЗДАНИИ КОТОРОЙ ИСПОЛЬЗУЮТСЯ ЛУЧШИЕ МЕТОДЫ СТОЛЯРНОГО МАСТЕРСТВА.
                         </h1>
 					<?php endif; ?>
-                    <a href="<?echo get_permalink( get_page_by_title( 'Каталог Товаров' ) )?>">Посмотреть</a>
+<!--                    <a href="--><?//echo get_permalink( get_page_by_title( 'Каталог Товаров' ) )?><!--">Посмотреть</a>-->
                 </div>
                 <div class="intro-image">
                     <!--                IMAGE BANNER-->
@@ -69,27 +85,6 @@ get_header();
                 </div>
             </div>
         </section>
-        <section class="slider">
-            <div class="container slider-container">
-                <div class="slider slider-for">
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/banner_photo.png" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.24.08.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.24.02.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.23.55.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/DSC_0238.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/DSC_0484.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-04-at-8.50.59-PM.png" alt=""></div>
-                </div>
-                <div class="slider slider-nav">
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/banner_photo.png" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.24.08.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.24.02.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/2018-05-04-20.23.55.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/DSC_0238.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/DSC_0484.jpg" alt=""></div>
-                    <div><img src="https://pratostore.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-04-at-8.50.59-PM.png" alt=""></div>
-                </div>
-            </div>
 
             <script>
 
@@ -97,43 +92,45 @@ get_header();
                     $('.slider-for').slick({
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        arrows: false,
+//                        arrows: true,
                         fade: true,
                         asNavFor: '.slider-nav',
                         cssEase: 'linear'
                     });
                     $('.slider-nav').slick({
-                        slidesToShow: 5,
-                        slidesToScroll: 2,
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
                         asNavFor: '.slider-for',
-                        dots: true,
-                        centerMode: true,
+//                        dots: true,
+                        centerMode: false,
                         focusOnSelect: true,
+                        adaptiveHeight: true,
+                        variableWidth: true,
                         arrows: true,
-                        autoplay: true,
-                        autoplaySpeed: 7000,
+//                        autoplay: true,
+//                        autoplaySpeed: 5000,
                         responsive: [
-                            {
-                                breakpoint: 1024,
-                                settings: {
-                                    slidesToShow: 5,
-                                    slidesToScroll: 2,
-                                    dots: true
-                                }
-                            },
-                            {
-                                breakpoint: 777,
-                                settings: {
-                                    slidesToShow: 4,
-                                    slidesToScroll: 2,
-                                    dots: true
-                                }
-                            },
+//                            {
+//                                breakpoint: 1024,
+//                                settings: {
+//                                    slidesToShow: 5,
+//                                    slidesToScroll: 2,
+//                                    dots: true
+//                                }
+//                            },
+//                            {
+//                                breakpoint: 777,
+//                                settings: {
+//                                    slidesToShow: 4,
+//                                    slidesToScroll: 2,
+//                                    dots: true
+//                                }
+//                            },
                             {
                                 breakpoint: 600,
                                 settings: {
                                     slidesToShow: 2,
-                                    slidesToScroll: 2
+                                    slidesToScroll: 1
                                 }
                             },
                             {
@@ -153,7 +150,7 @@ get_header();
                 });
 
             </script>
-        </section>
+
 
         <section class="about">
             <div class="container about-content">
@@ -196,17 +193,26 @@ get_header();
 
 
 	                if ( $loop->have_posts() ) {
-		                $terms = get_terms( 'product_tag' );
-		                $term_array = array();
-		                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-			                foreach ( $terms as $term ) {
-				                $term_array[] = $term->name;
-			                }
-		                }
 		                while ( $loop->have_posts() ) : $loop->the_post();
+
+
 
 			                global $product;
 
+			                $terms = get_the_terms( $product->get_id(), 'product_tag' );
+
+			                $term_array = array();
+			                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+				                foreach ( $terms as $term ) {
+					                $term_array[] = $term->name;
+				                }
+			                }
+
+			                $attachment_gal_ids = $product->get_gallery_image_ids();
+
+			                foreach( $attachment_gal_ids as $attachment_gal_id ) {
+                                $image_link = wp_get_attachment_url( $attachment_gal_id );
+			                }
 
 			                if ( has_post_thumbnail( $product->get_id() ) ) {
 				                $attachment_ids[0] = get_post_thumbnail_id( $product->get_id() );
@@ -216,19 +222,44 @@ get_header();
 //					$product->get_attribute( 'your_attr' );
 
 			                echo '
-                        <div class="product">
-                        <div class="product-image"
-                        style="background-image: url(' . $attachment[0] . ')" data-id="' . $product->get_id() . '"></div>
-                        <h4>' . get_the_title() . '</h4>
-                        <span>Стиль ' . $term_array[ $i ] . '</span>
-                        <a class="product-price-unknown" href="' . get_permalink() . '">Узнать цену</a>
-                        <a href="' . get_permalink() . '">Подробнее</a>
-                        </div>';
+                                <div class="product">
+                                    <div class="product-image product-toggle-popup"
+                                        style="background-image: url(' . $attachment[0] . ')" data-id="' . $product->get_id() . '"></div>
+                                    <h4>' . get_the_title() . '</h4>
+                                    <span>Стиль ' . $term_array[ 0 ] . '</span>
+                                    <a class="product-price-unknown" href="' . get_permalink() . '">Узнать цену</a>
+                                    <a class="more-info" href="' . get_permalink() . '">Подробнее</a>';
 
-//			                p class product-price-unknown
+    //
+                                echo '<div class="popup" id="popup-'.$product->get_id().'">
+                                    <button class="close-popup">Закрыть</button>
+                                    <div class="popup-window">
+                                    <div class="container slider-container">
+                                        <div class="slider slider-for">';
+                                            foreach( $attachment_gal_ids as $attachment_gal_id ) {
+                                                $image_link = wp_get_attachment_url( $attachment_gal_id );
+                                                echo '<div class="slider-next-click"><img src="'.$image_link.'"/></div>';
+                                            };
+                                        echo '
+                                        </div>
+                                        <div class="slider slider-nav">';
+                                            foreach( $attachment_gal_ids as $attachment_gal_id ) {
+                                                $image_link = wp_get_attachment_url( $attachment_gal_id );
+                                                echo '<div><img src="'.$image_link.'"/></div>';
+                                            };
+                                            echo '
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>';
 
 
-			                $i += 1;
+
+
+                                echo '</div>';
+    //			                p class product-price-unknown
+
+
 
 		                endwhile;
 
@@ -237,7 +268,47 @@ get_header();
 	                }
 	                wp_reset_postdata();
 	                ?>
+                    <script>
+//                        $('.slider-next-click').on("click", function () {
+//                            $('.slider-for').slick("slickNext");
+//                            $('.slider-nav').slick("slickNext");
+//                            $slider.slick("slickNext");
+//                        });
 
+                        var $slickElement = $('.slider-for');
+//                        var nextArrow = $('.slick-next');
+//                        var prevArrow = $('.slick-prev');
+
+                        $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+                            var i = (currentSlide ? currentSlide : 0);
+
+                            $('.slick-next').css('display','block');
+                            $('.slick-prev').css('display','block');
+
+                            if (i === 2) {
+                                console.log('hide 2');
+                                $('.slick-next').css('display','none');
+
+                            } else if(i === 0)
+                            {
+                                console.log('hide 0');
+                                $('.slick-prev').css('display','none')
+                            }
+                            console.log(i);
+                        });
+
+                        $('.product-toggle-popup').on('click', function () {
+                            var id = $(this).data('id');
+                            console.log(id, $(this));
+                            $('#popup-'+id).css('left','0');
+//                            $prevArrow.css('display','none');
+                        });
+
+                        $('.close-popup').on('click',function () {
+                            $('.popup').css('left','-9999999px');
+                        });
+
+                    </script>
 
                 </div>
             </div>

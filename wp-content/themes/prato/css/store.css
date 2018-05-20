@@ -306,7 +306,7 @@ input[type="search"],
   border-radius: 0 !important; }
 
 .active {
-  color: #4cb69f !important;
+  color: #2e005e !important;
   text-decoration: underline !important; }
 
 .highlighted {
@@ -503,7 +503,7 @@ footer {
     max-width: 50px;
     max-height: 50px; }
   .navigation-link:hover {
-    color: #4cb69f;
+    color: #2e005e;
     text-decoration: underline;
     -webkit-transition: 0.2s color ease;
     -moz-transition: 0.2s color ease;
@@ -606,7 +606,7 @@ input.search-field {
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease; }
     .footer-product-category a:hover {
-      color: #4cb69f;
+      color: #2e005e;
       text-decoration: underline;
       -webkit-transition: 0.3s all ease;
       -moz-transition: 0.3s all ease;
@@ -632,7 +632,7 @@ input.search-field {
   transition: 0.3s all ease; }
   .navigation-link-footer:hover {
     text-decoration: underline;
-    color: #4cb69f;
+    color: #2e005e;
     -webkit-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
     -ms-transition: 0.3s all ease;
@@ -688,7 +688,7 @@ input.search-field {
     color: #000;
     margin-top: 25px; }
     .footer-contact-email a:hover {
-      color: #4cb69f;
+      color: #2e005e;
       text-decoration: underline;
       -webkit-transition: 0.3s all ease;
       -moz-transition: 0.3s all ease;
