@@ -310,7 +310,7 @@ input[type="search"],
   text-decoration: underline !important; }
 
 .highlighted {
-  color: #4cb69f; }
+  color: #2e005e; }
 
 .ml-0 {
   margin-left: 0; }
@@ -671,7 +671,7 @@ input.search-field {
   font-family: "Open Sans", sans-serif;
   font-weight: 300; }
   .footer-contact-phones a:hover {
-    color: #4cb69f;
+    color: #2e005e;
     text-decoration: underline;
     -webkit-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;

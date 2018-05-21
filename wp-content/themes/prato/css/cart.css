@@ -310,7 +310,7 @@ input[type="search"],
   text-decoration: underline !important; }
 
 .highlighted {
-  color: #4cb69f; }
+  color: #2e005e; }
 
 .ml-0 {
   margin-left: 0; }
@@ -671,7 +671,7 @@ input.search-field {
   font-family: "Open Sans", sans-serif;
   font-weight: 300; }
   .footer-contact-phones a:hover {
-    color: #4cb69f;
+    color: #2e005e;
     text-decoration: underline;
     -webkit-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
@@ -1033,8 +1033,8 @@ input.search-field {
   .cart-order:hover {
     transition-delay: 0.2s;
     color: #f1f2f2;
-    background-color: #4cb69f;
-    border: 1px solid #4cb69f;
+    background-color: #2e005e;
+    border: 1px solid #2e005e;
     transition: all 0.4s ease-out; }
 
 .container {
@@ -1062,7 +1062,7 @@ input.search-field {
     transition-delay: 0.2s; }
     .cart-content-empty a:hover {
       transition-delay: 0.2s;
-      color: #4cb69f;
+      color: #2e005e;
       transition: all 0.4s ease-out; }
 
 .woocommerce-message {

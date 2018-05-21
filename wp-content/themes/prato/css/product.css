@@ -310,7 +310,7 @@ input[type="search"],
   text-decoration: underline !important; }
 
 .highlighted {
-  color: #4cb69f; }
+  color: #2e005e; }
 
 .ml-0 {
   margin-left: 0; }
@@ -671,7 +671,7 @@ input.search-field {
   font-family: "Open Sans", sans-serif;
   font-weight: 300; }
   .footer-contact-phones a:hover {
-    color: #4cb69f;
+    color: #2e005e;
     text-decoration: underline;
     -webkit-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
@@ -945,7 +945,7 @@ input.search-field {
     font-weight: 300;
     transition: all 0.3s ease; }
     .product-categories a:hover {
-      color: #4cb69f;
+      color: #2e005e;
       text-decoration: underline;
       transition: all 0.3s ease; }
 
@@ -1008,9 +1008,9 @@ input.search-field {
   cursor: pointer;
   transition: .4s all; }
   .product-main-desc a:hover {
-    border: 1px solid #4cb69f;
+    border: 1px solid #2e005e;
     color: #f1f2f2;
-    background-color: #4cb69f;
+    background-color: #2e005e;
     transition: .4s all; }
 
 .product-main-desc .product-price {
@@ -1087,8 +1087,8 @@ input.search-field {
     .related-product a:last-child:hover {
       transition-delay: 0.2s;
       color: #f1f2f2;
-      background-color: #4cb69f;
-      border: 1px solid #4cb69f;
+      background-color: #2e005e;
+      border: 1px solid #2e005e;
       transition: all 0.4s ease-out; }
 
 .related-product-image {
